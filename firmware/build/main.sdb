@@ -1,0 +1,895 @@
+[p LITE_MODE AUTOSTATIC LFSROK ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F14K50 ]
+[d frameptr 4065 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"31 /opt/microchip/xc8/v1.33/sources/common/abtofl.c
+[v ___abtofl __abtofl `(d  1 e 3 0 ]
+"33 /opt/microchip/xc8/v1.33/sources/common/abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"36 /opt/microchip/xc8/v1.33/sources/common/altofl.c
+[v ___altofl __altofl `(d  1 e 3 0 ]
+"42 /opt/microchip/xc8/v1.33/sources/common/altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 /opt/microchip/xc8/v1.33/sources/common/attofl.c
+[v ___attofl __attofl `(d  1 e 3 0 ]
+"37 /opt/microchip/xc8/v1.33/sources/common/attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"31 /opt/microchip/xc8/v1.33/sources/common/awtofl.c
+[v ___awtofl __awtofl `(d  1 e 3 0 ]
+"32 /opt/microchip/xc8/v1.33/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"63 /opt/microchip/xc8/v1.33/sources/common/double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 /opt/microchip/xc8/v1.33/sources/common/fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"49 /opt/microchip/xc8/v1.33/sources/common/fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v1.33/sources/common/flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.33/sources/common/flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"62 /opt/microchip/xc8/v1.33/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 /opt/microchip/xc8/v1.33/sources/common/flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"43 /opt/microchip/xc8/v1.33/sources/common/fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 /opt/microchip/xc8/v1.33/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"49 /opt/microchip/xc8/v1.33/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v1.33/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.33/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"20 /opt/microchip/xc8/v1.33/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v1.33/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 /opt/microchip/xc8/v1.33/sources/common/lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"27 /opt/microchip/xc8/v1.33/sources/common/lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"30 /opt/microchip/xc8/v1.33/sources/common/lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"35 /opt/microchip/xc8/v1.33/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 /opt/microchip/xc8/v1.33/sources/common/lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"30 /opt/microchip/xc8/v1.33/sources/common/lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 /opt/microchip/xc8/v1.33/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 /opt/microchip/xc8/v1.33/sources/common/lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"28 /opt/microchip/xc8/v1.33/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.33/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 /opt/microchip/xc8/v1.33/sources/common/Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.33/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 /opt/microchip/xc8/v1.33/sources/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asfladd.c
+[v ___asfladd __asfladd `(d  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asfldiv.c
+[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asflmul.c
+[v ___asflmul __asflmul `(d  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asflsub.c
+[v ___asflsub __asflsub `(d  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asftadd.c
+[v ___asftadd __asftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asftdiv.c
+[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.33/sources/pic18/aslmul.c
+[v ___aslmul __aslmul `(ul  1 e 4 0 ]
+"30 /home/jebr224/Desktop/del/USBtin/firmware/source/clock.c
+[v _clock_init clock_init `(v  1 e 0 0 ]
+"41
+[v _clock_process clock_process `(v  1 e 0 0 ]
+"54
+[v _clock_getMS clock_getMS `(us  1 e 2 0 ]
+"61
+[v _clock_reset clock_reset `(v  1 e 0 0 ]
+"81 /home/jebr224/Desktop/del/USBtin/firmware/source/main.c
+[v _parseHex parseHex `(uc  1 e 1 0 ]
+"104
+[v _sendHex sendHex `(v  1 e 0 0 ]
+"128
+[v _sendByteHex sendByteHex `(v  1 e 0 0 ]
+"138
+[v _transmitStd transmitStd `(uc  1 e 1 0 ]
+"176
+[v _parseLine parseLine `(v  1 e 0 0 ]
+"357
+[v _main main `(v  1 e 0 0 ]
+"30 /home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c
+[v _spi_transmit spi_transmit `(uc  1 e 1 0 ]
+"43
+[v _mcp2515_write_register mcp2515_write_register `(v  1 e 0 0 ]
+"63
+[v _mcp2515_read_register mcp2515_read_register `(uc  1 e 1 0 ]
+"90
+[v _mcp2515_bit_modify mcp2515_bit_modify `(v  1 e 0 0 ]
+"108
+[v _mcp2515_init mcp2515_init `(v  1 e 0 0 ]
+"165
+[v _mcp2515_set_SJA1000_filter_mask mcp2515_set_SJA1000_filter_mask `(v  1 e 0 0 ]
+"195
+[v _mcp2515_set_SJA1000_filter_code mcp2515_set_SJA1000_filter_code `(v  1 e 0 0 ]
+"226
+[v _mcp2515_set_bittiming mcp2515_set_bittiming `(v  1 e 0 0 ]
+"239
+[v _mcp2515_read_status mcp2515_read_status `(uc  1 e 1 0 ]
+"259
+[v _mcp2515_rx_status mcp2515_rx_status `(uc  1 e 1 0 ]
+"280
+[v _mcp2515_send_message mcp2515_send_message `(uc  1 e 1 0 ]
+"349
+[v _mcp2515_receive_message mcp2515_receive_message `(uc  1 e 1 0 ]
+"259 /home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c
+[v _usb_sendProcess usb_sendProcess `(v  1 e 0 0 ]
+"288
+[v _usb_loadDescriptor usb_loadDescriptor `(uc  1 e 1 0 ]
+"308
+[v _usb_handleDescriptorRequest usb_handleDescriptorRequest `(uc  1 e 1 0 ]
+"331
+[v _usb_putch usb_putch `(v  1 e 0 0 ]
+"352
+[v _usb_putstr usb_putstr `(v  1 e 0 0 ]
+"362
+[v _usb_txprocess usb_txprocess `(v  1 e 0 0 ]
+"394
+[v _usb_chReceived usb_chReceived `(uc  1 e 1 0 ]
+"403
+[v _usb_getch usb_getch `(uc  1 e 1 0 ]
+"419
+[v _usb_init usb_init `(v  1 e 0 0 ]
+"458
+[v _usb_process usb_process `(v  1 e 0 0 ]
+"47 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[v _UEP0 UEP0 `VEuc  1 e 1 @3923 ]
+"178
+[v _UEP1 UEP1 `VEuc  1 e 1 @3924 ]
+"309
+[v _UEP2 UEP2 `VEuc  1 e 1 @3925 ]
+"440
+[v _UEP3 UEP3 `VEuc  1 e 1 @3926 ]
+"1145
+[v _UADDR UADDR `VEuc  1 e 1 @3932 ]
+"1421
+[v _UCFG UCFG `VEuc  1 e 1 @3937 ]
+[s S553 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"1499
+[u S561 . 1 `S553 1 . 1 0 ]
+[v _UIRbits UIRbits `VES561  1 e 1 @3938 ]
+"1538
+[v _USTAT USTAT `VEuc  1 e 1 @3939 ]
+"1588
+[v _UCON UCON `VEuc  1 e 1 @3940 ]
+"1604
+[v _UCONbits UCONbits `VES561  1 e 1 @3940 ]
+"2288
+[v _ANSEL ANSEL `VEuc  1 e 1 @3966 ]
+"2332
+[v _ANSELH ANSELH `VEuc  1 e 1 @3967 ]
+[s S358 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"2421
+[s S365 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 AN3 1 0 :1:4 
+]
+[s S368 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 OSC2 1 0 :1:4 
+`uc 1 OSC1 1 0 :1:5 
+]
+[s S372 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CLKOUT 1 0 :1:4 
+`uc 1 CLKIN 1 0 :1:5 
+]
+[s S376 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S379 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RA2 1 0 :1:2 
+]
+[s S382 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RA6 1 0 :1:6 
+]
+[s S385 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RA7 1 0 :1:7 
+]
+[s S388 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S391 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S393 . 1 `S358 1 . 1 0 `S365 1 . 1 0 `S368 1 . 1 0 `S372 1 . 1 0 `S376 1 . 1 0 `S379 1 . 1 0 `S382 1 . 1 0 `S385 1 . 1 0 `S388 1 . 1 0 `S391 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES393  1 e 1 @3968 ]
+[s S217 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"2733
+[s S226 . 1 `uc 1 AN4 1 0 :1:0 
+`uc 1 AN5 1 0 :1:1 
+`uc 1 AN6 1 0 :1:2 
+`uc 1 AN7 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 AN8 1 0 :1:6 
+`uc 1 AN9 1 0 :1:7 
+]
+[s S234 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_SS 1 0 :1:6 
+]
+[s S237 . 1 `uc 1 C12INP 1 0 :1:0 
+`uc 1 C12IN1M 1 0 :1:1 
+`uc 1 C12IN2M 1 0 :1:2 
+`uc 1 C12IN3M 1 0 :1:3 
+`uc 1 C12OUT 1 0 :1:4 
+`uc 1 CCP1 1 0 :1:5 
+`uc 1 nSS 1 0 :1:6 
+]
+[s S245 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 PGM 1 0 :1:3 
+`uc 1 SRQ 1 0 :1:4 
+`uc 1 T0CKI 1 0 :1:5 
+`uc 1 T13CKI 1 0 :1:6 
+`uc 1 T1OSCO 1 0 :1:7 
+]
+[s S254 . 1 `uc 1 VREFP 1 0 :1:0 
+`uc 1 VREFM 1 0 :1:1 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 T1OSCI 1 0 :1:6 
+]
+[s S260 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 P1D 1 0 :1:2 
+`uc 1 P1C 1 0 :1:3 
+`uc 1 P1B 1 0 :1:4 
+`uc 1 P1A 1 0 :1:5 
+`uc 1 SS 1 0 :1:6 
+`uc 1 SDO 1 0 :1:7 
+]
+[s S268 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[s S271 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S274 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S277 . 1 `S217 1 . 1 0 `S226 1 . 1 0 `S234 1 . 1 0 `S237 1 . 1 0 `S245 1 . 1 0 `S254 1 . 1 0 `S260 1 . 1 0 `S268 1 . 1 0 `S271 1 . 1 0 `S274 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES277  1 e 1 @3970 ]
+[s S124 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3103
+[s S130 . 1 `uc 1 LB0 1 0 :1:0 
+]
+[s S132 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+]
+[s S135 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LB2 1 0 :1:2 
+]
+[s S138 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LB3 1 0 :1:3 
+]
+[s S141 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LB4 1 0 :1:4 
+]
+[s S144 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LB5 1 0 :1:5 
+]
+[s S147 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LB6 1 0 :1:6 
+]
+[s S150 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S153 . 1 `S124 1 . 1 0 `S130 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S147 1 . 1 0 `S150 1 . 1 0 ]
+[v _LATBbits LATBbits `VES153  1 e 1 @3978 ]
+[s S837 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3215
+[s S846 . 1 `uc 1 LC0 1 0 :1:0 
+]
+[s S848 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+]
+[s S851 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LC2 1 0 :1:2 
+]
+[s S854 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LC3 1 0 :1:3 
+]
+[s S857 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LC4 1 0 :1:4 
+]
+[s S860 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LC5 1 0 :1:5 
+]
+[s S863 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LC6 1 0 :1:6 
+]
+[s S866 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S869 . 1 `S837 1 . 1 0 `S846 1 . 1 0 `S848 1 . 1 0 `S851 1 . 1 0 `S854 1 . 1 0 `S857 1 . 1 0 `S860 1 . 1 0 `S863 1 . 1 0 `S866 1 . 1 0 ]
+[v _LATCbits LATCbits `VES869  1 e 1 @3979 ]
+[s S96 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3406
+[s S102 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S108 . 1 `S96 1 . 1 0 `S102 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES108  1 e 1 @3987 ]
+[s S930 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3541
+[u S948 . 1 `S930 1 . 1 0 `S217 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES948  1 e 1 @3988 ]
+"6093
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+"6162
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S677 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"6257
+[s S680 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S683 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S698 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S703 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 A 1 0 :1:5 
+]
+[s S708 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S713 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S718 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S721 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S724 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S729 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S732 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S735 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S738 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S741 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S744 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S747 . 1 `S677 1 . 1 0 `S680 1 . 1 0 `S683 1 . 1 0 `S677 1 . 1 0 `S680 1 . 1 0 `S698 1 . 1 0 `S703 1 . 1 0 `S708 1 . 1 0 `S713 1 . 1 0 `S718 1 . 1 0 `S721 1 . 1 0 `S724 1 . 1 0 `S729 1 . 1 0 `S732 1 . 1 0 `S735 1 . 1 0 `S738 1 . 1 0 `S741 1 . 1 0 `S744 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES747  1 e 1 @4039 ]
+"6407
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"6910
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"6988
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+"7057
+[v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
+"24 /home/jebr224/Desktop/del/USBtin/firmware/source/clock.c
+[v _clock_lastclock clock_lastclock `us  1 e 2 0 ]
+"25
+[v _clock_msticker clock_msticker `us  1 e 2 0 ]
+"70 /home/jebr224/Desktop/del/USBtin/firmware/source/main.c
+[v _state state `VEuc  1 e 1 0 ]
+"71
+[v _timestamping timestamping `uc  1 e 1 0 ]
+"77 /home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c
+[v _usb_dev_desc usb_dev_desc `C[18]uc  1 e 18 0 ]
+"94
+[v _usb_config_desc usb_config_desc `C[67]uc  1 e 67 0 ]
+"180
+[v _usb_string_0 usb_string_0 `C[4]uc  1 e 4 0 ]
+"186
+[v _usb_string_manuf usb_string_manuf `C[54]uc  1 e 54 0 ]
+"217
+[v _usb_string_product usb_string_product `C[14]uc  1 e 14 0 ]
+[s S538 . 4 `uc 1 stat 1 0 `uc 1 cnt 1 1 `uc 1 adrl 1 2 `uc 1 adrh 1 3 ]
+"234
+[s S543 . 8 `S538 1 out 4 0 `S538 1 in 4 4 ]
+[v _ep ep `VE[4]S543  1 e 32 @512 ]
+"235
+[v _ep0out_buffer ep0out_buffer `VE[8]uc  1 e 8 @640 ]
+"236
+[v _ep0in_buffer ep0in_buffer `VE[8]uc  1 e 8 @648 ]
+"237
+[v _ep2in_buffer ep2in_buffer `VE[8]uc  1 e 8 @664 ]
+"238
+[v _ep3out_buffer ep3out_buffer `VE[8]uc  1 e 8 @672 ]
+"239
+[v _ep1in_buffer ep1in_buffer `VE[64]uc  1 e 64 @680 ]
+"242
+[v _configured configured `ui  1 e 2 0 ]
+"243
+[v _usb_config usb_config `uc  1 e 1 0 ]
+"244
+[v _usb_setaddress usb_setaddress `uc  1 e 1 0 ]
+"245
+[v _usb_sendleft usb_sendleft `us  1 e 2 0 ]
+"246
+[v _usb_sendbuffer usb_sendbuffer `*.33Cuc  1 e 3 0 ]
+"248
+[v _txbuffer txbuffer `[128]uc  1 e 128 0 ]
+"249
+[v _txbuffer_writepos txbuffer_writepos `uc  1 e 1 0 ]
+"250
+[v _txbuffer_bytesleft txbuffer_bytesleft `uc  1 e 1 0 ]
+"251
+[v _usb_getchpos usb_getchpos `uc  1 e 1 0 ]
+"252
+[v _linecoding linecoding `[7]uc  1 e 7 0 ]
+"253
+[v _dolinecoding dolinecoding `uc  1 e 1 0 ]
+"357 /home/jebr224/Desktop/del/USBtin/firmware/source/main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"425
+[v main@i i `uc  1 a 1 104 ]
+"407
+[v main@timestamp timestamp `us  1 a 2 100 ]
+"405
+[v main@type type `uc  1 a 1 103 ]
+"406
+[v main@idlen idlen `uc  1 a 1 102 ]
+[s S26 . 1 `uc 1 rtr 1 0 :1:0 
+`uc 1 extended 1 0 :1:1 
+]
+"402
+[s S29 . 14 `ul 1 id 4 0 `S26 1 flags 1 4 `uc 1 length 1 5 `[8]uc 1 data 8 6 ]
+[v main@canmsg canmsg `S29  1 a 14 107 ]
+"386
+[v main@ch ch `uc  1 a 1 105 ]
+"375
+[v main@line line `[100]uc  1 a 100 0 ]
+"376
+[v main@linepos linepos `uc  1 a 1 106 ]
+"449
+} 0
+"419 /home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c
+[v _usb_init usb_init `(v  1 e 0 0 ]
+{
+"452
+} 0
+"403
+[v _usb_getch usb_getch `(uc  1 e 1 0 ]
+{
+"406
+[v usb_getch@ch ch `uc  1 a 1 0 ]
+"414
+} 0
+"394
+[v _usb_chReceived usb_chReceived `(uc  1 e 1 0 ]
+{
+"396
+} 0
+"176 /home/jebr224/Desktop/del/USBtin/firmware/source/main.c
+[v _parseLine parseLine `(v  1 e 0 0 ]
+{
+"212
+[v parseLine@value value `uc  1 a 1 0 ]
+"340
+[v parseLine@ac3 ac3 `ul  1 a 4 58 ]
+[v parseLine@ac2 ac2 `ul  1 a 4 54 ]
+[v parseLine@ac1 ac1 `ul  1 a 4 50 ]
+[v parseLine@ac0 ac0 `ul  1 a 4 46 ]
+"330
+[v parseLine@am3 am3 `ul  1 a 4 42 ]
+[v parseLine@am2 am2 `ul  1 a 4 38 ]
+[v parseLine@am1 am1 `ul  1 a 4 34 ]
+[v parseLine@am0 am0 `ul  1 a 4 30 ]
+"320
+[v parseLine@stamping stamping `ul  1 a 4 26 ]
+"305
+[v parseLine@flags flags `uc  1 a 1 62 ]
+"306
+[v parseLine@status status `uc  1 a 1 1 ]
+"220
+[v parseLine@data data `ul  1 a 4 22 ]
+[v parseLine@address_484 address `ul  1 a 4 18 ]
+"210
+[v parseLine@address address `ul  1 a 4 14 ]
+"201
+[v parseLine@cnf3 cnf3 `ul  1 a 4 10 ]
+[v parseLine@cnf2 cnf2 `ul  1 a 4 6 ]
+[v parseLine@cnf1 cnf1 `ul  1 a 4 2 ]
+"178
+[v parseLine@result result `uc  1 a 1 63 ]
+"176
+[v parseLine@line line `*.39uc  1 p 2 53 ]
+"351
+} 0
+"138
+[v _transmitStd transmitStd `(uc  1 e 1 0 ]
+{
+"161
+[v transmitStd@i i `uc  1 a 1 21 ]
+[s S26 . 1 `uc 1 rtr 1 0 :1:0 
+`uc 1 extended 1 0 :1:1 
+]
+"139
+[s S29 . 14 `ul 1 id 4 0 `S26 1 flags 1 4 `uc 1 length 1 5 `[8]uc 1 data 8 6 ]
+[v transmitStd@canmsg canmsg `S29  1 a 14 26 ]
+"140
+[v transmitStd@temp temp `ul  1 a 4 22 ]
+"141
+[v transmitStd@idlen idlen `uc  1 a 1 20 ]
+"138
+[v transmitStd@line line `*.39uc  1 p 2 15 ]
+"169
+} 0
+"81
+[v _parseHex parseHex `(uc  1 e 1 0 ]
+{
+[v parseHex@line line `*.39uc  1 p 2 0 ]
+[v parseHex@len len `uc  1 p 1 2 ]
+[v parseHex@value value `*.39ul  1 p 2 3 ]
+"96
+} 0
+"280 /home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c
+[v _mcp2515_send_message mcp2515_send_message `(uc  1 e 1 0 ]
+{
+"322
+[v mcp2515_send_message@i i `uc  1 a 1 12 ]
+"283
+[v mcp2515_send_message@address address `uc  1 a 1 14 ]
+"282
+[v mcp2515_send_message@status status `uc  1 a 1 13 ]
+[s S26 . 1 `uc 1 rtr 1 0 :1:0 
+`uc 1 extended 1 0 :1:1 
+]
+"280
+[s S29 . 14 `ul 1 id 4 0 `S26 1 flags 1 4 `uc 1 length 1 5 `[8]uc 1 data 8 6 ]
+[v mcp2515_send_message@p_canmsg p_canmsg `*.39S29  1 p 2 2 ]
+"341
+} 0
+"239
+[v _mcp2515_read_status mcp2515_read_status `(uc  1 e 1 0 ]
+{
+"245
+[v mcp2515_read_status@status status `uc  1 a 1 1 ]
+"251
+} 0
+"128 /home/jebr224/Desktop/del/USBtin/firmware/source/main.c
+[v _sendByteHex sendByteHex `(v  1 e 0 0 ]
+{
+[v sendByteHex@value value `uc  1 a 1 wreg ]
+[v sendByteHex@value value `uc  1 a 1 wreg ]
+"130
+[v sendByteHex@value value `uc  1 a 1 52 ]
+"131
+} 0
+"104
+[v _sendHex sendHex `(v  1 e 0 0 ]
+{
+"111
+[v sendHex@hex hex `uc  1 a 1 51 ]
+"106
+[v sendHex@s s `[20]uc  1 a 20 31 ]
+"104
+[v sendHex@value value `ul  1 p 4 22 ]
+[v sendHex@len len `uc  1 p 1 26 ]
+"121
+} 0
+"352 /home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c
+[v _usb_putstr usb_putstr `(v  1 e 0 0 ]
+{
+[v usb_putstr@s s `*.39uc  1 p 2 20 ]
+"357
+} 0
+"331
+[v _usb_putch usb_putch `(v  1 e 0 0 ]
+{
+[v usb_putch@ch ch `uc  1 a 1 wreg ]
+[v usb_putch@ch ch `uc  1 a 1 wreg ]
+"333
+[v usb_putch@ch ch `uc  1 a 1 19 ]
+"345
+} 0
+"458
+[v _usb_process usb_process `(v  1 e 0 0 ]
+{
+"551
+[v usb_process@i_667 i `uc  1 a 1 17 ]
+"538
+[v usb_process@i i `uc  1 a 1 16 ]
+"577
+[v usb_process@i_668 i `uc  1 a 1 18 ]
+"603
+} 0
+"362
+[v _usb_txprocess usb_txprocess `(v  1 e 0 0 ]
+{
+"367
+[v usb_txprocess@count count `uc  1 a 1 2 ]
+"370
+[v usb_txprocess@readpos readpos `uc  1 a 1 1 ]
+"372
+[v usb_txprocess@i i `uc  1 a 1 0 ]
+"386
+} 0
+"308
+[v _usb_handleDescriptorRequest usb_handleDescriptorRequest `(uc  1 e 1 0 ]
+{
+[v usb_handleDescriptorRequest@type type `uc  1 a 1 wreg ]
+[v usb_handleDescriptorRequest@type type `uc  1 a 1 wreg ]
+[v usb_handleDescriptorRequest@index index `uc  1 p 1 11 ]
+[v usb_handleDescriptorRequest@length length `us  1 p 2 12 ]
+[v usb_handleDescriptorRequest@type type `uc  1 a 1 14 ]
+"324
+} 0
+"288
+[v _usb_loadDescriptor usb_loadDescriptor `(uc  1 e 1 0 ]
+{
+[v usb_loadDescriptor@descbuffer descbuffer `*.25Cuc  1 p 2 5 ]
+[v usb_loadDescriptor@size size `us  1 p 2 7 ]
+[v usb_loadDescriptor@length length `us  1 p 2 9 ]
+"298
+} 0
+"259
+[v _usb_sendProcess usb_sendProcess `(v  1 e 0 0 ]
+{
+"262
+[v usb_sendProcess@length length `us  1 a 2 3 ]
+"266
+[v usb_sendProcess@i i `uc  1 a 1 2 ]
+"278
+} 0
+"226 /home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c
+[v _mcp2515_set_bittiming mcp2515_set_bittiming `(v  1 e 0 0 ]
+{
+[v mcp2515_set_bittiming@cnf1 cnf1 `uc  1 a 1 wreg ]
+[v mcp2515_set_bittiming@cnf1 cnf1 `uc  1 a 1 wreg ]
+[v mcp2515_set_bittiming@cnf2 cnf2 `uc  1 p 1 3 ]
+[v mcp2515_set_bittiming@cnf3 cnf3 `uc  1 p 1 4 ]
+"228
+[v mcp2515_set_bittiming@cnf1 cnf1 `uc  1 a 1 5 ]
+"232
+} 0
+"165
+[v _mcp2515_set_SJA1000_filter_mask mcp2515_set_SJA1000_filter_mask `(v  1 e 0 0 ]
+{
+[v mcp2515_set_SJA1000_filter_mask@amr0 amr0 `uc  1 a 1 wreg ]
+[v mcp2515_set_SJA1000_filter_mask@amr0 amr0 `uc  1 a 1 wreg ]
+[v mcp2515_set_SJA1000_filter_mask@amr1 amr1 `uc  1 p 1 3 ]
+[v mcp2515_set_SJA1000_filter_mask@amr2 amr2 `uc  1 p 1 4 ]
+[v mcp2515_set_SJA1000_filter_mask@amr3 amr3 `uc  1 p 1 5 ]
+"172
+[v mcp2515_set_SJA1000_filter_mask@amr0 amr0 `uc  1 a 1 6 ]
+"183
+} 0
+"195
+[v _mcp2515_set_SJA1000_filter_code mcp2515_set_SJA1000_filter_code `(v  1 e 0 0 ]
+{
+[v mcp2515_set_SJA1000_filter_code@acr0 acr0 `uc  1 a 1 wreg ]
+[v mcp2515_set_SJA1000_filter_code@acr0 acr0 `uc  1 a 1 wreg ]
+[v mcp2515_set_SJA1000_filter_code@acr1 acr1 `uc  1 p 1 3 ]
+[v mcp2515_set_SJA1000_filter_code@acr2 acr2 `uc  1 p 1 4 ]
+[v mcp2515_set_SJA1000_filter_code@acr3 acr3 `uc  1 p 1 5 ]
+"198
+[v mcp2515_set_SJA1000_filter_code@acr0 acr0 `uc  1 a 1 6 ]
+"214
+} 0
+"63
+[v _mcp2515_read_register mcp2515_read_register `(uc  1 e 1 0 ]
+{
+[v mcp2515_read_register@address address `uc  1 a 1 wreg ]
+"65
+[v mcp2515_read_register@data data `uc  1 a 1 2 ]
+"63
+[v mcp2515_read_register@address address `uc  1 a 1 wreg ]
+"68
+[v mcp2515_read_register@address address `uc  1 a 1 1 ]
+"78
+} 0
+"349
+[v _mcp2515_receive_message mcp2515_receive_message `(uc  1 e 1 0 ]
+{
+"388
+[v mcp2515_receive_message@i i `uc  1 a 1 15 ]
+"373
+[v mcp2515_receive_message@temp temp `ul  1 a 4 11 ]
+"351
+[v mcp2515_receive_message@status status `uc  1 a 1 17 ]
+"352
+[v mcp2515_receive_message@address address `uc  1 a 1 16 ]
+[s S26 . 1 `uc 1 rtr 1 0 :1:0 
+`uc 1 extended 1 0 :1:1 
+]
+"349
+[s S29 . 14 `ul 1 id 4 0 `S26 1 flags 1 4 `uc 1 length 1 5 `[8]uc 1 data 8 6 ]
+[v mcp2515_receive_message@p_canmsg p_canmsg `*.39S29  1 p 2 4 ]
+"402
+} 0
+"259
+[v _mcp2515_rx_status mcp2515_rx_status `(uc  1 e 1 0 ]
+{
+"265
+[v mcp2515_rx_status@status status `uc  1 a 1 1 ]
+"271
+} 0
+"90
+[v _mcp2515_bit_modify mcp2515_bit_modify `(v  1 e 0 0 ]
+{
+[v mcp2515_bit_modify@address address `uc  1 a 1 wreg ]
+[v mcp2515_bit_modify@address address `uc  1 a 1 wreg ]
+[v mcp2515_bit_modify@mask mask `uc  1 p 1 1 ]
+[v mcp2515_bit_modify@data data `uc  1 p 1 2 ]
+"93
+[v mcp2515_bit_modify@address address `uc  1 a 1 3 ]
+"102
+} 0
+"108
+[v _mcp2515_init mcp2515_init `(v  1 e 0 0 ]
+{
+"110
+[v mcp2515_init@dummy dummy `uc  1 a 1 3 ]
+"151
+} 0
+"43
+[v _mcp2515_write_register mcp2515_write_register `(v  1 e 0 0 ]
+{
+[v mcp2515_write_register@address address `uc  1 a 1 wreg ]
+[v mcp2515_write_register@address address `uc  1 a 1 wreg ]
+[v mcp2515_write_register@data data `uc  1 p 1 1 ]
+"46
+[v mcp2515_write_register@address address `uc  1 a 1 2 ]
+"54
+} 0
+"30
+[v _spi_transmit spi_transmit `(uc  1 e 1 0 ]
+{
+[v spi_transmit@c c `uc  1 a 1 wreg ]
+[v spi_transmit@c c `uc  1 a 1 wreg ]
+[v spi_transmit@c c `uc  1 a 1 0 ]
+"34
+} 0
+"41 /home/jebr224/Desktop/del/USBtin/firmware/source/clock.c
+[v _clock_process clock_process `(v  1 e 0 0 ]
+{
+"47
+} 0
+"30
+[v _clock_init clock_init `(v  1 e 0 0 ]
+{
+"36
+} 0
+"61
+[v _clock_reset clock_reset `(v  1 e 0 0 ]
+{
+"65
+} 0
+"54
+[v _clock_getMS clock_getMS `(us  1 e 2 0 ]
+{
+"56
+} 0

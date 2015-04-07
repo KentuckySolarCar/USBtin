@@ -1,0 +1,1420 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"57 usb_cdc.c
+[s S486 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S486 . stat cnt adrl adrh ]
+"65
+[s S487 `S486 1 `S486 1 ]
+[n S487 . out in ]
+"28 usb_cdc.h
+[v _usb_process `(v ~T0 @X0 0 ef ]
+"47 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[v _UEP0 `Vuc ~T0 @X0 0 e@3923 ]
+"178
+[v _UEP1 `Vuc ~T0 @X0 0 e@3924 ]
+"309
+[v _UEP2 `Vuc ~T0 @X0 0 e@3925 ]
+"440
+[v _UEP3 `Vuc ~T0 @X0 0 e@3926 ]
+"1421
+[v _UCFG `Vuc ~T0 @X0 0 e@3937 ]
+"1588
+[v _UCON `Vuc ~T0 @X0 0 e@3940 ]
+"1489
+[s S117 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S117 . URSTIF UERRIF ACTVIF TRNIF IDLEIF STALLIF SOFIF ]
+"1488
+[u S116 `S117 1 ]
+[n S116 . . ]
+"1499
+[v _UIRbits `VS116 ~T0 @X0 0 e@3938 ]
+"1538
+[v _USTAT `Vuc ~T0 @X0 0 e@3939 ]
+"1145
+[v _UADDR `Vuc ~T0 @X0 0 e@3932 ]
+"1594
+[s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S121 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"1593
+[u S120 `S121 1 ]
+[n S120 . . ]
+"1604
+[v _UCONbits `VS120 ~T0 @X0 0 e@3940 ]
+"49 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[; <" UEP0 equ 0F53h ;# ">
+"180
+[; <" UEP1 equ 0F54h ;# ">
+"311
+[; <" UEP2 equ 0F55h ;# ">
+"442
+[; <" UEP3 equ 0F56h ;# ">
+"573
+[; <" UEP4 equ 0F57h ;# ">
+"704
+[; <" UEP5 equ 0F58h ;# ">
+"835
+[; <" UEP6 equ 0F59h ;# ">
+"966
+[; <" UEP7 equ 0F5Ah ;# ">
+"1097
+[; <" UEIE equ 0F5Bh ;# ">
+"1147
+[; <" UADDR equ 0F5Ch ;# ">
+"1210
+[; <" UFRML equ 0F5Dh ;# ">
+"1279
+[; <" UFRMH equ 0F5Eh ;# ">
+"1318
+[; <" UEIR equ 0F5Fh ;# ">
+"1368
+[; <" UIE equ 0F60h ;# ">
+"1423
+[; <" UCFG equ 0F61h ;# ">
+"1485
+[; <" UIR equ 0F62h ;# ">
+"1540
+[; <" USTAT equ 0F63h ;# ">
+"1590
+[; <" UCON equ 0F64h ;# ">
+"1640
+[; <" SRCON0 equ 0F68h ;# ">
+"1710
+[; <" SRCON1 equ 0F69h ;# ">
+"1771
+[; <" CM2CON0 equ 0F6Bh ;# ">
+"1840
+[; <" CM2CON1 equ 0F6Ch ;# ">
+"1901
+[; <" CM1CON0 equ 0F6Dh ;# ">
+"1970
+[; <" SSPMSK equ 0F6Fh ;# ">
+"1975
+[; <" SSPMASK equ 0F6Fh ;# ">
+"2107
+[; <" SLRCON equ 0F76h ;# ">
+"2138
+[; <" WPUA equ 0F77h ;# ">
+"2170
+[; <" WPUB equ 0F78h ;# ">
+"2208
+[; <" IOCA equ 0F79h ;# ">
+"2252
+[; <" IOCB equ 0F7Ah ;# ">
+"2290
+[; <" ANSEL equ 0F7Eh ;# ">
+"2334
+[; <" ANSELH equ 0F7Fh ;# ">
+"2371
+[; <" PORTA equ 0F80h ;# ">
+"2507
+[; <" PORTB equ 0F81h ;# ">
+"2658
+[; <" PORTC equ 0F82h ;# ">
+"2954
+[; <" LATA equ 0F89h ;# ">
+"3060
+[; <" LATB equ 0F8Ah ;# ">
+"3169
+[; <" LATC equ 0F8Bh ;# ">
+"3301
+[; <" TRISA equ 0F92h ;# ">
+"3306
+[; <" DDRA equ 0F92h ;# ">
+"3382
+[; <" TRISB equ 0F93h ;# ">
+"3387
+[; <" DDRB equ 0F93h ;# ">
+"3511
+[; <" TRISC equ 0F94h ;# ">
+"3516
+[; <" DDRC equ 0F94h ;# ">
+"3732
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"3801
+[; <" PIE1 equ 0F9Dh ;# ">
+"3874
+[; <" PIR1 equ 0F9Eh ;# ">
+"3947
+[; <" IPR1 equ 0F9Fh ;# ">
+"4020
+[; <" PIE2 equ 0FA0h ;# ">
+"4085
+[; <" PIR2 equ 0FA1h ;# ">
+"4150
+[; <" IPR2 equ 0FA2h ;# ">
+"4215
+[; <" EECON1 equ 0FA6h ;# ">
+"4280
+[; <" EECON2 equ 0FA7h ;# ">
+"4286
+[; <" EEDATA equ 0FA8h ;# ">
+"4292
+[; <" EEADR equ 0FA9h ;# ">
+"4353
+[; <" RCSTA equ 0FABh ;# ">
+"4358
+[; <" RCSTA1 equ 0FABh ;# ">
+"4562
+[; <" TXSTA equ 0FACh ;# ">
+"4567
+[; <" TXSTA1 equ 0FACh ;# ">
+"4859
+[; <" TXREG equ 0FADh ;# ">
+"4864
+[; <" TXREG1 equ 0FADh ;# ">
+"4870
+[; <" RCREG equ 0FAEh ;# ">
+"4875
+[; <" RCREG1 equ 0FAEh ;# ">
+"4881
+[; <" SPBRG equ 0FAFh ;# ">
+"4886
+[; <" SPBRG1 equ 0FAFh ;# ">
+"4892
+[; <" SPBRGH equ 0FB0h ;# ">
+"4898
+[; <" T3CON equ 0FB1h ;# ">
+"5006
+[; <" TMR3 equ 0FB2h ;# ">
+"5012
+[; <" TMR3L equ 0FB2h ;# ">
+"5018
+[; <" TMR3H equ 0FB3h ;# ">
+"5024
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5105
+[; <" PWM1CON equ 0FB7h ;# ">
+"5174
+[; <" BAUDCON equ 0FB8h ;# ">
+"5179
+[; <" BAUDCTL equ 0FB8h ;# ">
+"5339
+[; <" PSTRCON equ 0FB9h ;# ">
+"5382
+[; <" REFCON0 equ 0FBAh ;# ">
+"5387
+[; <" VREFCON0 equ 0FBAh ;# ">
+"5459
+[; <" REFCON1 equ 0FBBh ;# ">
+"5464
+[; <" VREFCON1 equ 0FBBh ;# ">
+"5594
+[; <" REFCON2 equ 0FBCh ;# ">
+"5599
+[; <" VREFCON2 equ 0FBCh ;# ">
+"5679
+[; <" CCP1CON equ 0FBDh ;# ">
+"5760
+[; <" CCPR1 equ 0FBEh ;# ">
+"5766
+[; <" CCPR1L equ 0FBEh ;# ">
+"5772
+[; <" CCPR1H equ 0FBFh ;# ">
+"5778
+[; <" ADCON2 equ 0FC0h ;# ">
+"5848
+[; <" ADCON1 equ 0FC1h ;# ">
+"5894
+[; <" ADCON0 equ 0FC2h ;# ">
+"6016
+[; <" ADRES equ 0FC3h ;# ">
+"6022
+[; <" ADRESL equ 0FC3h ;# ">
+"6028
+[; <" ADRESH equ 0FC4h ;# ">
+"6034
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6095
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6164
+[; <" SSPSTAT equ 0FC7h ;# ">
+"6403
+[; <" SSPADD equ 0FC8h ;# ">
+"6409
+[; <" SSPBUF equ 0FC9h ;# ">
+"6415
+[; <" T2CON equ 0FCAh ;# ">
+"6485
+[; <" PR2 equ 0FCBh ;# ">
+"6490
+[; <" MEMCON equ 0FCBh ;# ">
+"6594
+[; <" TMR2 equ 0FCCh ;# ">
+"6600
+[; <" T1CON equ 0FCDh ;# ">
+"6704
+[; <" TMR1 equ 0FCEh ;# ">
+"6710
+[; <" TMR1L equ 0FCEh ;# ">
+"6716
+[; <" TMR1H equ 0FCFh ;# ">
+"6722
+[; <" RCON equ 0FD0h ;# ">
+"6854
+[; <" WDTCON equ 0FD1h ;# ">
+"6881
+[; <" OSCCON2 equ 0FD2h ;# ">
+"6912
+[; <" OSCCON equ 0FD3h ;# ">
+"6990
+[; <" T0CON equ 0FD5h ;# ">
+"7059
+[; <" TMR0 equ 0FD6h ;# ">
+"7065
+[; <" TMR0L equ 0FD6h ;# ">
+"7071
+[; <" TMR0H equ 0FD7h ;# ">
+"7077
+[; <" STATUS equ 0FD8h ;# ">
+"7155
+[; <" FSR2 equ 0FD9h ;# ">
+"7161
+[; <" FSR2L equ 0FD9h ;# ">
+"7167
+[; <" FSR2H equ 0FDAh ;# ">
+"7173
+[; <" PLUSW2 equ 0FDBh ;# ">
+"7179
+[; <" PREINC2 equ 0FDCh ;# ">
+"7185
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"7191
+[; <" POSTINC2 equ 0FDEh ;# ">
+"7197
+[; <" INDF2 equ 0FDFh ;# ">
+"7203
+[; <" BSR equ 0FE0h ;# ">
+"7209
+[; <" FSR1 equ 0FE1h ;# ">
+"7215
+[; <" FSR1L equ 0FE1h ;# ">
+"7221
+[; <" FSR1H equ 0FE2h ;# ">
+"7227
+[; <" PLUSW1 equ 0FE3h ;# ">
+"7233
+[; <" PREINC1 equ 0FE4h ;# ">
+"7239
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"7245
+[; <" POSTINC1 equ 0FE6h ;# ">
+"7251
+[; <" INDF1 equ 0FE7h ;# ">
+"7257
+[; <" WREG equ 0FE8h ;# ">
+"7268
+[; <" FSR0 equ 0FE9h ;# ">
+"7274
+[; <" FSR0L equ 0FE9h ;# ">
+"7280
+[; <" FSR0H equ 0FEAh ;# ">
+"7286
+[; <" PLUSW0 equ 0FEBh ;# ">
+"7292
+[; <" PREINC0 equ 0FECh ;# ">
+"7298
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"7304
+[; <" POSTINC0 equ 0FEEh ;# ">
+"7310
+[; <" INDF0 equ 0FEFh ;# ">
+"7316
+[; <" INTCON3 equ 0FF0h ;# ">
+"7407
+[; <" INTCON2 equ 0FF1h ;# ">
+"7476
+[; <" INTCON equ 0FF2h ;# ">
+"7622
+[; <" PROD equ 0FF3h ;# ">
+"7628
+[; <" PRODL equ 0FF3h ;# ">
+"7634
+[; <" PRODH equ 0FF4h ;# ">
+"7640
+[; <" TABLAT equ 0FF5h ;# ">
+"7648
+[; <" TBLPTR equ 0FF6h ;# ">
+"7654
+[; <" TBLPTRL equ 0FF6h ;# ">
+"7660
+[; <" TBLPTRH equ 0FF7h ;# ">
+"7666
+[; <" TBLPTRU equ 0FF8h ;# ">
+"7674
+[; <" PCLAT equ 0FF9h ;# ">
+"7681
+[; <" PC equ 0FF9h ;# ">
+"7687
+[; <" PCL equ 0FF9h ;# ">
+"7693
+[; <" PCLATH equ 0FFAh ;# ">
+"7699
+[; <" PCLATU equ 0FFBh ;# ">
+"7705
+[; <" STKPTR equ 0FFCh ;# ">
+"7778
+[; <" TOS equ 0FFDh ;# ">
+"7784
+[; <" TOSL equ 0FFDh ;# ">
+"7790
+[; <" TOSH equ 0FFEh ;# ">
+"7796
+[; <" TOSU equ 0FFFh ;# ">
+"77 usb_cdc.c
+[v _usb_dev_desc `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usb_dev_desc
+:U ..
+"78
+-> -> 18 `i `uc
+"79
+-> -> 1 `i `uc
+"80
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+"81
+-> -> 2 `i `uc
+"82
+-> -> 0 `i `uc
+"83
+-> -> 0 `i `uc
+"84
+-> -> 8 `i `uc
+"85
+-> -> 216 `i `uc
+-> -> 4 `i `uc
+"86
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+"87
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+"88
+-> -> 1 `i `uc
+"89
+-> -> 2 `i `uc
+"90
+-> -> 0 `i `uc
+"92
+-> -> 1 `i `uc
+..
+]
+"94
+[v _usb_config_desc `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usb_config_desc
+:U ..
+"96
+-> -> 9 `i `uc
+"97
+-> -> 2 `i `uc
+"98
+-> + + + + + + + + + -> 9 `i -> 9 `i -> 5 `i -> 5 `i -> 4 `i -> 5 `i -> 7 `i -> 9 `i -> 7 `i -> 7 `i `uc
+"99
+-> -> 0 `i `uc
+"100
+-> -> 2 `i `uc
+"101
+-> -> 1 `i `uc
+"102
+-> -> 0 `i `uc
+"103
+-> -> 128 `i `uc
+"104
+-> -> 50 `i `uc
+"106
+-> -> 9 `i `uc
+"107
+-> -> 4 `i `uc
+"109
+-> -> 0 `i `uc
+"110
+-> -> 0 `i `uc
+"111
+-> -> 1 `i `uc
+"112
+-> -> 2 `i `uc
+"113
+-> -> 2 `i `uc
+"114
+-> -> 1 `i `uc
+"115
+-> -> 0 `i `uc
+"117
+-> -> 5 `i `uc
+"118
+-> -> 36 `i `uc
+"119
+-> -> 0 `i `uc
+"120
+-> -> 16 `i `uc
+"121
+-> -> 1 `i `uc
+"124
+-> -> 4 `i `uc
+"125
+-> -> 36 `i `uc
+"126
+-> -> 2 `i `uc
+"127
+-> -> 2 `i `uc
+"130
+-> -> 5 `i `uc
+"131
+-> -> 36 `i `uc
+"132
+-> -> 6 `i `uc
+"133
+-> -> 0 `i `uc
+"134
+-> -> 1 `i `uc
+"137
+-> -> 5 `i `uc
+"138
+-> -> 36 `i `uc
+"139
+-> -> 1 `i `uc
+"140
+-> -> 0 `i `uc
+"141
+-> -> 1 `i `uc
+"145
+-> -> 7 `i `uc
+"146
+-> -> 5 `i `uc
+"147
+-> -> 130 `i `uc
+"148
+-> -> 3 `i `uc
+"149
+-> -> 8 `i `uc
+"150
+-> -> 0 `i `uc
+"151
+-> -> 2 `i `uc
+"153
+-> -> 9 `i `uc
+"154
+-> -> 4 `i `uc
+"155
+-> -> 1 `i `uc
+"156
+-> -> 0 `i `uc
+"157
+-> -> 2 `i `uc
+"158
+-> -> 10 `i `uc
+"159
+-> -> 0 `i `uc
+"160
+-> -> 0 `i `uc
+"161
+-> -> 0 `i `uc
+"163
+-> -> 7 `i `uc
+"164
+-> -> 5 `i `uc
+"165
+-> -> 3 `i `uc
+"166
+-> -> 2 `i `uc
+"167
+-> -> 8 `i `uc
+"168
+-> -> 0 `i `uc
+"169
+-> -> 0 `i `uc
+"171
+-> -> 7 `i `uc
+"172
+-> -> 5 `i `uc
+"173
+-> -> 129 `i `uc
+"174
+-> -> 2 `i `uc
+"175
+-> -> 64 `i `uc
+"176
+-> -> 0 `i `uc
+"178
+-> -> 0 `i `uc
+..
+]
+"180
+[v _usb_string_0 `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usb_string_0
+:U ..
+"181
+-> -> 4 `i `uc
+"182
+-> -> 3 `i `uc
+"183
+-> -> 9 `i `uc
+-> -> 4 `i `uc
+..
+]
+"186
+[v _usb_string_manuf `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usb_string_manuf
+:U ..
+"187
+-> -> 54 `i `uc
+"188
+-> -> 3 `i `uc
+"189
+-> -> 77 `ui `uc
+-> -> 0 `i `uc
+"190
+-> -> 105 `ui `uc
+-> -> 0 `i `uc
+"191
+-> -> 99 `ui `uc
+-> -> 0 `i `uc
+"192
+-> -> 114 `ui `uc
+-> -> 0 `i `uc
+"193
+-> -> 111 `ui `uc
+-> -> 0 `i `uc
+"194
+-> -> 99 `ui `uc
+-> -> 0 `i `uc
+"195
+-> -> 104 `ui `uc
+-> -> 0 `i `uc
+"196
+-> -> 105 `ui `uc
+-> -> 0 `i `uc
+"197
+-> -> 112 `ui `uc
+-> -> 0 `i `uc
+"198
+-> -> 32 `ui `uc
+-> -> 0 `i `uc
+"199
+-> -> 84 `ui `uc
+-> -> 0 `i `uc
+"200
+-> -> 101 `ui `uc
+-> -> 0 `i `uc
+"201
+-> -> 99 `ui `uc
+-> -> 0 `i `uc
+"202
+-> -> 104 `ui `uc
+-> -> 0 `i `uc
+"203
+-> -> 110 `ui `uc
+-> -> 0 `i `uc
+"204
+-> -> 111 `ui `uc
+-> -> 0 `i `uc
+"205
+-> -> 108 `ui `uc
+-> -> 0 `i `uc
+"206
+-> -> 111 `ui `uc
+-> -> 0 `i `uc
+"207
+-> -> 103 `ui `uc
+-> -> 0 `i `uc
+"208
+-> -> 121 `ui `uc
+-> -> 0 `i `uc
+"209
+-> -> 44 `ui `uc
+-> -> 0 `i `uc
+"210
+-> -> 32 `ui `uc
+-> -> 0 `i `uc
+"211
+-> -> 73 `ui `uc
+-> -> 0 `i `uc
+"212
+-> -> 110 `ui `uc
+-> -> 0 `i `uc
+"213
+-> -> 99 `ui `uc
+-> -> 0 `i `uc
+"214
+-> -> 46 `ui `uc
+"215
+-> -> 0 `i `uc
+..
+]
+"217
+[v _usb_string_product `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usb_string_product
+:U ..
+"218
+-> -> 14 `i `uc
+"219
+-> -> 3 `i `uc
+"220
+-> -> 85 `ui `uc
+-> -> 0 `i `uc
+"221
+-> -> 83 `ui `uc
+-> -> 0 `i `uc
+"222
+-> -> 66 `ui `uc
+-> -> 0 `i `uc
+"223
+-> -> 116 `ui `uc
+-> -> 0 `i `uc
+"224
+-> -> 105 `ui `uc
+-> -> 0 `i `uc
+"225
+-> -> 110 `ui `uc
+"226
+-> -> 0 `i `uc
+..
+]
+"234
+[v _ep `VS487 ~T0 @X0 -> 4 `i e@512 ]
+"235
+[v _ep0out_buffer `Vuc ~T0 @X0 -> 8 `i e@640 ]
+"236
+[v _ep0in_buffer `Vuc ~T0 @X0 -> 8 `i e@648 ]
+"237
+[v _ep2in_buffer `Vuc ~T0 @X0 -> 8 `i e@664 ]
+"238
+[v _ep3out_buffer `Vuc ~T0 @X0 -> 8 `i e@672 ]
+"239
+[v _ep1in_buffer `Vuc ~T0 @X0 -> 64 `i e@680 ]
+"242
+[v _configured `ui ~T0 @X0 1 e ]
+[i _configured
+-> -> 0 `i `ui
+]
+"243
+[v _usb_config `uc ~T0 @X0 1 e ]
+[i _usb_config
+-> -> 0 `i `uc
+]
+"244
+[v _usb_setaddress `uc ~T0 @X0 1 e ]
+[i _usb_setaddress
+-> -> 0 `i `uc
+]
+"245
+[v _usb_sendleft `us ~T0 @X0 1 e ]
+[i _usb_sendleft
+-> -> 0 `i `us
+]
+"246
+[v _usb_sendbuffer `*Cuc ~T0 @X0 1 e ]
+[i _usb_sendbuffer
+-> -> 0 `i `*Cuc
+]
+"248
+[v _txbuffer `uc ~T0 @X0 -> 128 `i e ]
+"249
+[v _txbuffer_writepos `uc ~T0 @X0 1 e ]
+[i _txbuffer_writepos
+-> -> 0 `i `uc
+]
+"250
+[v _txbuffer_bytesleft `uc ~T0 @X0 1 e ]
+[i _txbuffer_bytesleft
+-> -> 0 `i `uc
+]
+"251
+[v _usb_getchpos `uc ~T0 @X0 1 e ]
+[i _usb_getchpos
+-> -> 0 `i `uc
+]
+"252
+[v _linecoding `uc ~T0 @X0 -> 7 `i e ]
+"253
+[v _dolinecoding `uc ~T0 @X0 1 e ]
+[i _dolinecoding
+-> -> 0 `i `uc
+]
+"259
+[v _usb_sendProcess `(v ~T0 @X0 1 ef ]
+{
+[e :U _usb_sendProcess ]
+[f ]
+"260
+[e $ ! == -> _usb_sendleft `ui -> -> 0 `i `ui 489  ]
+[e $UE 488  ]
+[e :U 489 ]
+"262
+[v _length `us ~T0 @X0 1 a ]
+[e = _length _usb_sendleft ]
+"263
+[e $ ! > -> _length `ui -> -> 8 `i `ui 490  ]
+"264
+[e = _length -> -> 8 `i `us ]
+[e :U 490 ]
+"266
+[v _i `uc ~T0 @X0 1 a ]
+"267
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 494  ]
+[e :U 491 ]
+{
+"268
+[e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux *U _usb_sendbuffer ]
+"269
+[e ++ _usb_sendbuffer * -> -> 1 `i `x -> -> # *U _usb_sendbuffer `i `x ]
+"270
+[e -- _usb_sendleft -> -> 1 `i `us ]
+"271
+}
+"267
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 494 ]
+[e $ < -> _i `ui -> _length `ui 491  ]
+[e :U 492 ]
+"271
+}
+"273
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> _length `uc ]
+"274
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 495  ]
+"275
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 136 `i `uc ]
+[e $U 496  ]
+"276
+[e :U 495 ]
+"277
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+[e :U 496 ]
+"278
+[e :UE 488 ]
+}
+"288
+[v _usb_loadDescriptor `(uc ~T0 @X0 1 ef3`*Cuc`us`us ]
+{
+[e :U _usb_loadDescriptor ]
+[v _descbuffer `*Cuc ~T0 @X0 1 r1 ]
+[v _size `us ~T0 @X0 1 r2 ]
+[v _length `us ~T0 @X0 1 r3 ]
+[f ]
+"290
+[e $ ! > -> _length `ui -> _size `ui 498  ]
+"291
+[e = _length _size ]
+[e :U 498 ]
+"293
+[e = _usb_sendleft _length ]
+"294
+[e = _usb_sendbuffer _descbuffer ]
+"296
+[e ( _usb_sendProcess ..  ]
+"297
+[e ) -> _length `uc ]
+[e $UE 497  ]
+"298
+[e :UE 497 ]
+}
+"308
+[v _usb_handleDescriptorRequest `(uc ~T0 @X0 1 ef3`uc`uc`us ]
+{
+[e :U _usb_handleDescriptorRequest ]
+[v _type `uc ~T0 @X0 1 r1 ]
+[v _index `uc ~T0 @X0 1 r2 ]
+[v _length `us ~T0 @X0 1 r3 ]
+[f ]
+"310
+[e $U 501  ]
+{
+"311
+[e :U 502 ]
+"312
+[e ) ( _usb_loadDescriptor (3 , , &U _usb_dev_desc -> -> # _usb_dev_desc `ui `us _length ]
+[e $UE 499  ]
+"313
+[e :U 503 ]
+"314
+[e ) ( _usb_loadDescriptor (3 , , &U _usb_config_desc -> -> # _usb_config_desc `ui `us _length ]
+[e $UE 499  ]
+"315
+[e :U 504 ]
+"316
+[e $U 506  ]
+{
+"317
+[e :U 507 ]
+[e ) ( _usb_loadDescriptor (3 , , &U _usb_string_0 -> -> # _usb_string_0 `ui `us _length ]
+[e $UE 499  ]
+"318
+[e :U 508 ]
+[e ) ( _usb_loadDescriptor (3 , , &U _usb_string_manuf -> -> # _usb_string_manuf `ui `us _length ]
+[e $UE 499  ]
+"319
+[e :U 509 ]
+[e ) ( _usb_loadDescriptor (3 , , &U _usb_string_product -> -> # _usb_string_product `ui `us _length ]
+[e $UE 499  ]
+"320
+}
+[e $U 505  ]
+"316
+[e :U 506 ]
+[e [\ _index , $ -> -> 0 `i `uc 507
+ , $ -> -> 1 `i `uc 508
+ , $ -> -> 2 `i `uc 509
+ 505 ]
+"320
+[e :U 505 ]
+"321
+}
+[e $U 500  ]
+"310
+[e :U 501 ]
+[e [\ _type , $ -> -> 1 `i `uc 502
+ , $ -> -> 2 `i `uc 503
+ , $ -> -> 3 `i `uc 504
+ 500 ]
+"321
+[e :U 500 ]
+"323
+[e ) -> -> 0 `i `uc ]
+[e $UE 499  ]
+"324
+[e :UE 499 ]
+}
+"331
+[v _usb_putch `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _usb_putch ]
+[v _ch `uc ~T0 @X0 1 r1 ]
+[f ]
+"333
+[e $ ! == -> _txbuffer_bytesleft `i -> 128 `i 511  ]
+{
+"335
+[e $UE 510  ]
+"336
+}
+[e :U 511 ]
+"338
+[e = *U + &U _txbuffer * -> _txbuffer_writepos `ux -> -> # *U &U _txbuffer `ui `ux _ch ]
+"339
+[e ++ _txbuffer_writepos -> -> 1 `i `uc ]
+"340
+[e $ ! == -> _txbuffer_writepos `i -> 128 `i 512  ]
+[e = _txbuffer_writepos -> -> 0 `i `uc ]
+[e :U 512 ]
+"341
+[e ++ _txbuffer_bytesleft -> -> 1 `i `uc ]
+"344
+[e ( _usb_process ..  ]
+"345
+[e :UE 510 ]
+}
+"352
+[v _usb_putstr `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _usb_putstr ]
+[v _s `*uc ~T0 @X0 1 r1 ]
+[f ]
+"353
+[e $U 514  ]
+[e :U 515 ]
+{
+"354
+[e ( _usb_putch (1 *U _s ]
+"355
+[e ++ _s * -> -> 1 `i `x -> -> # *U _s `i `x ]
+"356
+}
+[e :U 514 ]
+"353
+[e $ != -> *U _s `i -> -> -> 0 `i `uc `i 515  ]
+[e :U 516 ]
+"357
+[e :UE 513 ]
+}
+"362
+[v _usb_txprocess `(v ~T0 @X0 1 ef ]
+{
+[e :U _usb_txprocess ]
+[f ]
+"363
+[e $ ! == -> _txbuffer_bytesleft `i -> 0 `i 518  ]
+[e $UE 517  ]
+[e :U 518 ]
+"364
+[e $ ! ! != _configured -> -> 0 `i `ui 519  ]
+[e $UE 517  ]
+[e :U 519 ]
+"365
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 128 `i -> 0 `i 520  ]
+[e $UE 517  ]
+[e :U 520 ]
+"367
+[v _count `uc ~T0 @X0 1 a ]
+[e = _count _txbuffer_bytesleft ]
+"368
+[e $ ! > -> _count `i - -> 64 `i -> 1 `i 521  ]
+[e = _count -> - -> 64 `i -> 1 `i `uc ]
+[e :U 521 ]
+"370
+[v _readpos `uc ~T0 @X0 1 a ]
+[e = _readpos -> % - + -> 128 `i -> _txbuffer_writepos `i -> _txbuffer_bytesleft `i -> 128 `i `uc ]
+"372
+[v _i `uc ~T0 @X0 1 a ]
+"373
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 525  ]
+[e :U 522 ]
+{
+"374
+[e = *U + &U _ep1in_buffer * -> _i `ux -> -> # *U &U _ep1in_buffer `ui `ux *U + &U _txbuffer * -> _readpos `ux -> -> # *U &U _txbuffer `ui `ux ]
+"375
+[e ++ _readpos -> -> 1 `i `uc ]
+"376
+[e $ ! == -> _readpos `i -> 128 `i 526  ]
+[e = _readpos -> -> 0 `i `uc ]
+[e :U 526 ]
+"377
+}
+"373
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 525 ]
+[e $ < -> _i `i -> _count `i 522  ]
+[e :U 523 ]
+"377
+}
+"379
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 _count ]
+"380
+[e =- _txbuffer_bytesleft _count ]
+"382
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 527  ]
+"383
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 136 `i `uc ]
+[e $U 528  ]
+"384
+[e :U 527 ]
+"385
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+[e :U 528 ]
+"386
+[e :UE 517 ]
+}
+"394
+[v _usb_chReceived `(uc ~T0 @X0 1 ef ]
+{
+[e :U _usb_chReceived ]
+[f ]
+"395
+[e ) -> -> == & -> . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 `i -> 128 `i -> 0 `i `i `uc ]
+[e $UE 529  ]
+"396
+[e :UE 529 ]
+}
+"403
+[v _usb_getch `(uc ~T0 @X0 1 ef ]
+{
+[e :U _usb_getch ]
+[f ]
+"404
+[e $U 531  ]
+[e :U 532 ]
+{
+}
+[e :U 531 ]
+[v F4611 `(uc ~T0 @X0 1 tf ]
+[e $ ! != &U _usb_chReceived -> -> 0 `i `*F4611 532  ]
+[e :U 533 ]
+"406
+[v _ch `uc ~T0 @X0 1 a ]
+[e = _ch *U + &U _ep3out_buffer * -> _usb_getchpos `ux -> -> # *U &U _ep3out_buffer `ui `ux ]
+"407
+[e ++ _usb_getchpos -> -> 1 `i `uc ]
+"408
+[e $ ! == -> _usb_getchpos `i -> . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 `i 534  ]
+{
+"409
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
+"410
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 -> -> 128 `i `uc ]
+"411
+[e = _usb_getchpos -> -> 0 `i `uc ]
+"412
+}
+[e :U 534 ]
+"413
+[e ) _ch ]
+[e $UE 530  ]
+"414
+[e :UE 530 ]
+}
+"419
+[v _usb_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _usb_init ]
+[f ]
+"420
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 -> -> 128 `i `uc ]
+"421
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
+"422
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 2 -> -> 128 `i `uc ]
+"423
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 3 -> -> 2 `i `uc ]
+"425
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
+"426
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 8 `i `uc ]
+"427
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 2 -> -> 136 `i `uc ]
+"428
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 3 -> -> 2 `i `uc ]
+"430
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 64 `i `uc ]
+"431
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 64 `i `uc ]
+"432
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 2 -> -> 168 `i `uc ]
+"433
+[e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 3 -> -> 2 `i `uc ]
+"435
+[e = . . *U + &U _ep * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
+"436
+[e = . . *U + &U _ep * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 8 `i `uc ]
+"437
+[e = . . *U + &U _ep * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 2 -> -> 152 `i `uc ]
+"438
+[e = . . *U + &U _ep * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 3 -> -> 2 `i `uc ]
+"440
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 -> -> 128 `i `uc ]
+"441
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
+"442
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 2 -> -> 160 `i `uc ]
+"443
+[e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 3 -> -> 2 `i `uc ]
+"445
+[e = _UEP0 -> -> 22 `i `uc ]
+"446
+[e = _UEP1 -> -> 26 `i `uc ]
+"447
+[e = _UEP2 -> -> 26 `i `uc ]
+"448
+[e = _UEP3 -> -> 28 `i `uc ]
+"450
+[e = _UCFG -> -> 20 `i `uc ]
+"451
+[e = _UCON -> -> 8 `i `uc ]
+"452
+[e :UE 535 ]
+}
+"458
+[v _usb_process `(v ~T0 @X0 1 ef ]
+{
+[e :U _usb_process ]
+[f ]
+"460
+[e ( _usb_txprocess ..  ]
+"462
+[e $ ! != -> . . _UIRbits 0 3 `i -> -> -> 0 `i `Vuc `i 537  ]
+{
+"465
+[e $ ! == -> _USTAT `i -> 0 `i 538  ]
+{
+"469
+[e $ ! == & >> -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 `i -> 2 `i -> 15 `i -> 13 `i 539  ]
+{
+"472
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
+"473
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
+"475
+[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 0 `i -> 5 `i 540  ]
+{
+"477
+[e $U 542  ]
+{
+"478
+[e :U 543 ]
+"479
+[e $ ! ! != -> ( _usb_handleDescriptorRequest (3 , , *U + &U _ep0out_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux -> | << -> *U + &U _ep0out_buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 8 `i -> *U + &U _ep0out_buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i `us `i -> -> -> 0 `i `uc `i 544  ]
+{
+"480
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"481
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
+"482
+}
+[e :U 544 ]
+"483
+[e $U 541  ]
+"484
+[e :U 545 ]
+"486
+[e = _usb_setaddress *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
+"488
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"489
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"491
+[e $U 541  ]
+"492
+[e :U 546 ]
+"494
+[e = _usb_config *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
+"495
+[e = _configured -> -> 1 `i `ui ]
+"496
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"497
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"498
+[e $U 541  ]
+"500
+[e :U 547 ]
+"502
+[e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux _usb_config ]
+"503
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 1 `i `uc ]
+"504
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"505
+[e $U 541  ]
+"507
+[e :U 548 ]
+"509
+[e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
+"510
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 1 `i `uc ]
+"511
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"512
+[e $U 541  ]
+"514
+[e :U 549 ]
+"515
+[e :U 550 ]
+"516
+[e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
+"517
+[e = *U + &U _ep0in_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
+"518
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 2 `i `uc ]
+"519
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"520
+[e $U 541  ]
+"522
+[e :U 551 ]
+"523
+[e :U 552 ]
+"524
+[e :U 553 ]
+"525
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"526
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"527
+[e $U 541  ]
+"528
+[e :U 554 ]
+"529
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"530
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
+"531
+[e $U 541  ]
+"533
+}
+[e $U 541  ]
+"477
+[e :U 542 ]
+[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 6 `i `uc 543
+ , $ -> -> 5 `i `uc 545
+ , $ -> -> 9 `i `uc 546
+ , $ -> -> 8 `i `uc 547
+ , $ -> -> 10 `i `uc 548
+ , $ -> -> 18 `i `uc 549
+ , $ -> -> 0 `i `uc 550
+ , $ -> -> 17 `i `uc 551
+ , $ -> -> 1 `i `uc 552
+ , $ -> -> 3 `i `uc 553
+ 554 ]
+"533
+[e :U 541 ]
+"534
+}
+[e $U 555  ]
+[e :U 540 ]
+[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 1 `i -> 5 `i 556  ]
+{
+"535
+[e $U 558  ]
+{
+"537
+[e :U 559 ]
+"538
+{
+[v _i `uc ~T0 @X0 1 a ]
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 560  ]
+[e $U 561  ]
+[e :U 560 ]
+{
+[e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 560  ]
+[e :U 561 ]
+}
+}
+"539
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 8 `i `uc ]
+"540
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"541
+[e $U 557  ]
+"543
+[e :U 563 ]
+"544
+[e = _dolinecoding -> -> 1 `i `uc ]
+"545
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"546
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"547
+[e $U 557  ]
+"549
+[e :U 564 ]
+"550
+{
+"551
+[v _i `uc ~T0 @X0 1 a ]
+"552
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _linecoding `ui 565  ]
+[e $U 566  ]
+[e :U 565 ]
+{
+"553
+[e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux *U + &U _linecoding * -> _i `ux -> -> # *U &U _linecoding `ui `ux ]
+"554
+}
+"552
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _linecoding `ui 565  ]
+[e :U 566 ]
+"554
+}
+"555
+}
+"556
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 7 `i `uc ]
+"557
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"558
+[e $U 557  ]
+"560
+[e :U 568 ]
+"561
+[e :U 569 ]
+"562
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"563
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
+"564
+[e $U 557  ]
+"565
+[e :U 570 ]
+"566
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
+"567
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
+"568
+[e $U 557  ]
+"569
+}
+[e $U 557  ]
+"535
+[e :U 558 ]
+[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 1 `i `uc 559
+ , $ -> -> 32 `i `uc 563
+ , $ -> -> 33 `i `uc 564
+ , $ -> -> 34 `i `uc 568
+ , $ -> -> 0 `i `uc 569
+ 570 ]
+"569
+[e :U 557 ]
+"570
+}
+[e :U 556 ]
+"573
+[e :U 555 ]
+}
+[e $U 571  ]
+[e :U 539 ]
+{
+"576
+[e $ ! != -> _dolinecoding `i -> -> -> 0 `i `uc `i 572  ]
+{
+"577
+[v _i `uc ~T0 @X0 1 a ]
+"578
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _linecoding `ui 573  ]
+[e $U 574  ]
+[e :U 573 ]
+{
+"579
+[e = *U + &U _linecoding * -> _i `ux -> -> # *U &U _linecoding `ui `ux *U + &U _ep0out_buffer * -> _i `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
+"580
+}
+"578
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _linecoding `ui 573  ]
+[e :U 574 ]
+"580
+}
+"581
+[e = _dolinecoding -> -> 0 `i `uc ]
+"582
+}
+[e :U 572 ]
+"583
+}
+[e :U 571 ]
+"585
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
+"586
+[e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 -> -> 128 `i `uc ]
+"588
+}
+[e $U 576  ]
+[e :U 538 ]
+[e $ ! == -> _USTAT `i -> 4 `i 577  ]
+{
+"591
+[e $ ! > -> _usb_setaddress `i -> 0 `i 578  ]
+{
+"592
+[e = _UADDR _usb_setaddress ]
+"593
+[e = _usb_setaddress -> -> 0 `i `uc ]
+"594
+}
+[e :U 578 ]
+"596
+[e ( _usb_sendProcess ..  ]
+"598
+}
+[e :U 577 ]
+"600
+[e :U 576 ]
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"601
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"602
+}
+[e :U 537 ]
+"603
+[e :UE 536 ]
+}

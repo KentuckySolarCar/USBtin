@@ -1,0 +1,139 @@
+
+
+Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
+                                                                                                           Tue Apr  7 21:38:46 2015
+
+
+     1                           
+     2                           	; Microchip MPLAB XC8 C Compiler V1.33
+     3                           	; Copyright (C) 1984-2014 HI-TECH Software
+     4                           
+     5                           	; Auto-generated runtime startup code for final link stage.
+     6                           
+     7                           	;
+     8                           	; Compiler options:
+     9                           	;
+    10                           	; main.c usb_cdc.c mcp2515.c clock.c --chip=18F14K50 --CODEOFFSET=1000h \
+    11                           	; --ROM=default,-0-fff --MODE=free
+    12                           	;
+    13                           
+    14                           
+    15                           	processor	18F14K50
+    16                           
+    17                           	GLOBAL	_main,start
+    18                           	FNROOT	_main
+    19                           
+    20  0000                     
+    21                           	psect	config,class=CONFIG,delta=1,noexec
+    22                           	psect	idloc,class=IDLOC,delta=1,noexec
+    23                           	psect	const,class=CODE,delta=1,reloc=2,noexec
+    24                           	psect	smallconst,class=SMALLCONST,delta=1,reloc=2,noexec
+    25                           	psect	mediumconst,class=MEDIUMCONST,delta=1,reloc=2,noexec
+    26                           	psect	rbss,class=COMRAM,space=1,noexec
+    27                           	psect	bss,class=RAM,space=1,noexec
+    28                           	psect	rdata,class=COMRAM,space=1,noexec
+    29                           	psect	irdata,class=CODE,space=0,reloc=2,noexec
+    30                           	psect	bss,class=RAM,space=1,noexec
+    31                           	psect	data,class=RAM,space=1,noexec
+    32                           	psect	idata,class=CODE,space=0,reloc=2,noexec
+    33                           	psect	nvrram,class=COMRAM,space=1,noexec
+    34                           	psect	nvbit,class=COMRAM,bit,space=1,noexec
+    35                           	psect	temp,ovrld,class=COMRAM,space=1,noexec
+    36                           	psect	struct,ovrld,class=COMRAM,space=1,noexec
+    37                           	psect	rbit,class=COMRAM,bit,space=1,noexec
+    38                           	psect	bigbss,class=BIGRAM,space=1,noexec
+    39                           	psect	bigdata,class=BIGRAM,space=1,noexec
+    40                           	psect	ibigdata,class=CODE,space=0,reloc=2,noexec
+    41                           	psect	farbss,class=FARRAM,space=0,reloc=2,delta=1,noexec
+    42                           	psect	nvFARRAM,class=FARRAM,space=0,reloc=2,delta=1,noexec
+    43                           	psect	fardata,class=FARRAM,space=0,reloc=2,delta=1,noexec
+    44                           	psect	ifardata,class=CODE,space=0,reloc=2,delta=1,noexec
+    45                           
+    46                           	psect	reset_vec,class=CODE,delta=1,reloc=2
+    47                           	psect	powerup,class=CODE,delta=1,reloc=2
+    48                           	psect	intcode,class=CODE,delta=1,reloc=2
+    49                           	psect	intcode_body,class=CODE,delta=1,reloc=2
+    50                           	psect	intcodelo,class=CODE,delta=1,reloc=2
+    51                           	psect	intret,class=CODE,delta=1,reloc=2
+    52                           	psect	intentry,class=CODE,delta=1,reloc=2
+    53                           
+    54                           	psect	intsave_regs,class=BIGRAM,space=1
+    55                           	psect	init,class=CODE,delta=1,reloc=2
+    56                           	psect	text,class=CODE,delta=1,reloc=2
+    57                           GLOBAL	intlevel0,intlevel1,intlevel2
+    58                           intlevel0:
+    59  000000                     intlevel1:
+    60  000000                     intlevel2:
+    61  000000                     GLOBAL	intlevel3
+    62                           intlevel3:
+    63  000000                     	psect	end_init,class=CODE,delta=1,reloc=2
+    64                           	psect	clrtext,class=CODE,delta=1,reloc=2
+    65                           
+    66                           	psect	eeprom_data,class=EEDATA,delta=1,noexec
+    67                           	psect	smallconst
+    68                           	GLOBAL	__smallconst
+    69                           __smallconst:
+    70  001004                     	psect	mediumconst
+    71                           	GLOBAL	__mediumconst
+    72                           __mediumconst:
+    73  000000                     wreg	EQU	0FE8h
+    74  0000                     fsr0l	EQU	0FE9h
+    75  0000                     fsr0h	EQU	0FEAh
+    76  0000                     fsr1l	EQU	0FE1h
+    77  0000                     fsr1h	EQU	0FE2h
+    78  0000                     fsr2l	EQU	0FD9h
+    79  0000                     fsr2h	EQU	0FDAh
+    80  0000                     postinc0	EQU	0FEEh
+    81  0000                     postdec0	EQU	0FEDh
+    82  0000                     postinc1	EQU	0FE6h
+    83  0000                     postdec1	EQU	0FE5h
+    84  0000                     postinc2	EQU	0FDEh
+    85  0000                     postdec2	EQU	0FDDh
+    86  0000                     tblptrl	EQU	0FF6h
+    87  0000                     tblptrh	EQU	0FF7h
+    88  0000                     tblptru	EQU	0FF8h
+    89  0000                     tablat		EQU	0FF5h
+    90  0000                     
+    91                           	PSECT	ramtop,class=RAM,noexec
+    92                           	GLOBAL	__S1			; top of RAM usage
+    93                           	GLOBAL	__ramtop
+    94                           	GLOBAL	__LRAM,__HRAM
+    95                           __ramtop:
+    96  000300                     
+    97                           	psect	reset_vec
+    98                           reset_vec:
+    99  001000                     	; No powerup routine
+   100                           	; No interrupt routine
+   101                           	GLOBAL __accesstop
+   102                           __accesstop EQU 96
+   103  0000                     
+   104                           
+   105                           	psect	init
+   106                           start:
+   107  001000                     
+   108                           ;Initialize the stack pointer (FSR1)
+   109                           	global stacklo, stackhi
+   110                           	stacklo	equ	0A0h
+   111  0000                     	stackhi	equ	0FFh
+   112  0000                     
+   113                           
+   114                           	psect	stack,class=STACK,space=2,noexec
+   115                           	global ___sp,___inthi_sp,___intlo_sp
+   116                           ___sp:
+   117  000000                     ___inthi_sp:
+   118  000000                     ___intlo_sp:
+   119  000000                     
+   120                           	psect	end_init
+   121                           	global start_initialization
+   122                           	goto start_initialization	;jump to C runtime clear & initialization
+   123  001000  EFFC  F014         
+
+
+Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                               Tue Apr  7 21:38:46 2015
+
+                __S1 01FA                 ___sp 0000                 _main 3200                 start 1000  
+              __HRAM 0000                __LRAM 0001         __mediumconst 0000               stackhi 0000FF  
+             stacklo 0000A0           __accesstop 000060           ___inthi_sp 0000           ___intlo_sp 0000  
+            __ramtop 0300  start_initialization 29F8          __smallconst 1004             intlevel0 0000  
+           intlevel1 0000             intlevel2 0000             intlevel3 0000             reset_vec 1000  

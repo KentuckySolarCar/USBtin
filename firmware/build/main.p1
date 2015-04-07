@@ -1,0 +1,1332 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"24 usb_cdc.h
+[v _usb_putstr `(v ~T0 @X0 0 ef1`*uc ]
+"87 mcp2515.h
+[s S488 :1 `uc 1 :1 `uc 1 ]
+[n S488 . rtr extended ]
+"85
+[s S487 `ul 1 `S488 1 `uc 1 `uc -> 8 `i ]
+[n S487 . id flags length data ]
+"104
+[v _mcp2515_send_message `(uc ~T0 @X0 0 ef1`*S487 ]
+"103
+[v _mcp2515_set_bittiming `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"98
+[v _mcp2515_read_register `(uc ~T0 @X0 0 ef1`uc ]
+"99
+[v _mcp2515_write_register `(v ~T0 @X0 0 ef2`uc`uc ]
+"23 usb_cdc.h
+[v _usb_putch `(v ~T0 @X0 0 ef1`uc ]
+"100 mcp2515.h
+[v _mcp2515_bit_modify `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"27 clock.h
+[v _clock_reset `(v ~T0 @X0 0 ef ]
+"101 mcp2515.h
+[v _mcp2515_set_SJA1000_filter_mask `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+"102
+[v _mcp2515_set_SJA1000_filter_code `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+[p mainexit ]
+"97
+[v _mcp2515_init `(v ~T0 @X0 0 ef ]
+"6910 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"2288
+[v _ANSEL `Vuc ~T0 @X0 0 e@3966 ]
+"2332
+[v _ANSELH `Vuc ~T0 @X0 0 e@3967 ]
+"3391
+[s S225 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S225 . . TRISB4 TRISB5 TRISB6 TRISB7 ]
+"3398
+[s S226 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S226 . . RB4 RB5 RB6 RB7 ]
+"3390
+[u S224 `S225 1 `S226 1 ]
+[n S224 . . . ]
+"3406
+[v _TRISBbits `VS224 ~T0 @X0 0 e@3987 ]
+"3064
+[s S199 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S199 . . LATB4 LATB5 LATB6 LATB7 ]
+"3071
+[s S200 :1 `uc 1 ]
+[n S200 . LB0 ]
+"3074
+[s S201 :1 `uc 1 :1 `uc 1 ]
+[n S201 . . LB1 ]
+"3078
+[s S202 :2 `uc 1 :1 `uc 1 ]
+[n S202 . . LB2 ]
+"3082
+[s S203 :3 `uc 1 :1 `uc 1 ]
+[n S203 . . LB3 ]
+"3086
+[s S204 :4 `uc 1 :1 `uc 1 ]
+[n S204 . . LB4 ]
+"3090
+[s S205 :5 `uc 1 :1 `uc 1 ]
+[n S205 . . LB5 ]
+"3094
+[s S206 :6 `uc 1 :1 `uc 1 ]
+[n S206 . . LB6 ]
+"3098
+[s S207 :7 `uc 1 :1 `uc 1 ]
+[n S207 . . LB7 ]
+"3063
+[u S198 `S199 1 `S200 1 `S201 1 `S202 1 `S203 1 `S204 1 `S205 1 `S206 1 `S207 1 ]
+[n S198 . . . . . . . . . . ]
+"3103
+[v _LATBbits `VS198 ~T0 @X0 0 e@3978 ]
+"24 clock.h
+[v _clock_init `(v ~T0 @X0 0 ef ]
+"27 usb_cdc.h
+[v _usb_init `(v ~T0 @X0 0 ef ]
+"28
+[v _usb_process `(v ~T0 @X0 0 ef ]
+"25 clock.h
+[v _clock_process `(v ~T0 @X0 0 ef ]
+"26 usb_cdc.h
+[v _usb_getch `(uc ~T0 @X0 0 ef ]
+"25
+[v _usb_chReceived `(uc ~T0 @X0 0 ef ]
+"2662 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[s S177 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S177 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"2672
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . AN4 AN5 AN6 AN7 . AN8 AN9 ]
+"2681
+[s S179 :6 `uc 1 :1 `uc 1 ]
+[n S179 . . NOT_SS ]
+"2685
+[s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S180 . C12INP C12IN1M C12IN2M C12IN3M C12OUT CCP1 nSS ]
+"2694
+[s S181 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S181 . INT0 INT1 INT2 PGM SRQ T0CKI T13CKI T1OSCO ]
+"2704
+[s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S182 . VREFP VREFM CVREF . T1OSCI ]
+"2711
+[s S183 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S183 . . P1D P1C P1B P1A SS SDO ]
+"2720
+[s S184 :1 `uc 1 :1 `uc 1 ]
+[n S184 . . CCP2 ]
+"2724
+[s S185 :2 `uc 1 :1 `uc 1 ]
+[n S185 . . PA1 ]
+"2728
+[s S186 :1 `uc 1 :1 `uc 1 ]
+[n S186 . . PA2 ]
+"2661
+[u S176 `S177 1 `S178 1 `S179 1 `S180 1 `S181 1 `S182 1 `S183 1 `S184 1 `S185 1 `S186 1 ]
+[n S176 . . . . . . . . . . . ]
+"2733
+[v _PORTCbits `VS176 ~T0 @X0 0 e@3970 ]
+"26 clock.h
+[v _clock_getMS `(us ~T0 @X0 0 ef ]
+"106 mcp2515.h
+[v _mcp2515_receive_message `(uc ~T0 @X0 0 ef1`*S487 ]
+"2375 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[s S156 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S156 . RA0 RA1 . RA3 RA4 RA5 ]
+"2383
+[s S157 :4 `uc 1 :1 `uc 1 ]
+[n S157 . . AN3 ]
+"2387
+[s S158 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S158 . . OSC2 OSC1 ]
+"2392
+[s S159 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S159 . . CLKOUT CLKIN ]
+"2397
+[s S160 :5 `uc 1 :1 `uc 1 ]
+[n S160 . . LVDIN ]
+"2401
+[s S161 :2 `uc 1 :1 `uc 1 ]
+[n S161 . . RA2 ]
+"2405
+[s S162 :6 `uc 1 :1 `uc 1 ]
+[n S162 . . RA6 ]
+"2409
+[s S163 :7 `uc 1 :1 `uc 1 ]
+[n S163 . . RA7 ]
+"2413
+[s S164 :7 `uc 1 :1 `uc 1 ]
+[n S164 . . RJPU ]
+"2417
+[s S165 :1 `uc 1 ]
+[n S165 . ULPWUIN ]
+"2374
+[u S155 `S156 1 `S157 1 `S158 1 `S159 1 `S160 1 `S161 1 `S162 1 `S163 1 `S164 1 `S165 1 ]
+[n S155 . . . . . . . . . . . ]
+"2421
+[v _PORTAbits `VS155 ~T0 @X0 0 e@3968 ]
+"1588
+[v _UCON `Vuc ~T0 @X0 0 e@3940 ]
+[v F4546 `(v ~T0 @X0 1 tf1`ul ]
+"147 /opt/microchip/xc8/v1.33/include/pic18.h
+[v __delay `JF4546 ~T0 @X0 0 e ]
+[p i __delay ]
+"49 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+[; <" UEP0 equ 0F53h ;# ">
+"180
+[; <" UEP1 equ 0F54h ;# ">
+"311
+[; <" UEP2 equ 0F55h ;# ">
+"442
+[; <" UEP3 equ 0F56h ;# ">
+"573
+[; <" UEP4 equ 0F57h ;# ">
+"704
+[; <" UEP5 equ 0F58h ;# ">
+"835
+[; <" UEP6 equ 0F59h ;# ">
+"966
+[; <" UEP7 equ 0F5Ah ;# ">
+"1097
+[; <" UEIE equ 0F5Bh ;# ">
+"1147
+[; <" UADDR equ 0F5Ch ;# ">
+"1210
+[; <" UFRML equ 0F5Dh ;# ">
+"1279
+[; <" UFRMH equ 0F5Eh ;# ">
+"1318
+[; <" UEIR equ 0F5Fh ;# ">
+"1368
+[; <" UIE equ 0F60h ;# ">
+"1423
+[; <" UCFG equ 0F61h ;# ">
+"1485
+[; <" UIR equ 0F62h ;# ">
+"1540
+[; <" USTAT equ 0F63h ;# ">
+"1590
+[; <" UCON equ 0F64h ;# ">
+"1640
+[; <" SRCON0 equ 0F68h ;# ">
+"1710
+[; <" SRCON1 equ 0F69h ;# ">
+"1771
+[; <" CM2CON0 equ 0F6Bh ;# ">
+"1840
+[; <" CM2CON1 equ 0F6Ch ;# ">
+"1901
+[; <" CM1CON0 equ 0F6Dh ;# ">
+"1970
+[; <" SSPMSK equ 0F6Fh ;# ">
+"1975
+[; <" SSPMASK equ 0F6Fh ;# ">
+"2107
+[; <" SLRCON equ 0F76h ;# ">
+"2138
+[; <" WPUA equ 0F77h ;# ">
+"2170
+[; <" WPUB equ 0F78h ;# ">
+"2208
+[; <" IOCA equ 0F79h ;# ">
+"2252
+[; <" IOCB equ 0F7Ah ;# ">
+"2290
+[; <" ANSEL equ 0F7Eh ;# ">
+"2334
+[; <" ANSELH equ 0F7Fh ;# ">
+"2371
+[; <" PORTA equ 0F80h ;# ">
+"2507
+[; <" PORTB equ 0F81h ;# ">
+"2658
+[; <" PORTC equ 0F82h ;# ">
+"2954
+[; <" LATA equ 0F89h ;# ">
+"3060
+[; <" LATB equ 0F8Ah ;# ">
+"3169
+[; <" LATC equ 0F8Bh ;# ">
+"3301
+[; <" TRISA equ 0F92h ;# ">
+"3306
+[; <" DDRA equ 0F92h ;# ">
+"3382
+[; <" TRISB equ 0F93h ;# ">
+"3387
+[; <" DDRB equ 0F93h ;# ">
+"3511
+[; <" TRISC equ 0F94h ;# ">
+"3516
+[; <" DDRC equ 0F94h ;# ">
+"3732
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"3801
+[; <" PIE1 equ 0F9Dh ;# ">
+"3874
+[; <" PIR1 equ 0F9Eh ;# ">
+"3947
+[; <" IPR1 equ 0F9Fh ;# ">
+"4020
+[; <" PIE2 equ 0FA0h ;# ">
+"4085
+[; <" PIR2 equ 0FA1h ;# ">
+"4150
+[; <" IPR2 equ 0FA2h ;# ">
+"4215
+[; <" EECON1 equ 0FA6h ;# ">
+"4280
+[; <" EECON2 equ 0FA7h ;# ">
+"4286
+[; <" EEDATA equ 0FA8h ;# ">
+"4292
+[; <" EEADR equ 0FA9h ;# ">
+"4353
+[; <" RCSTA equ 0FABh ;# ">
+"4358
+[; <" RCSTA1 equ 0FABh ;# ">
+"4562
+[; <" TXSTA equ 0FACh ;# ">
+"4567
+[; <" TXSTA1 equ 0FACh ;# ">
+"4859
+[; <" TXREG equ 0FADh ;# ">
+"4864
+[; <" TXREG1 equ 0FADh ;# ">
+"4870
+[; <" RCREG equ 0FAEh ;# ">
+"4875
+[; <" RCREG1 equ 0FAEh ;# ">
+"4881
+[; <" SPBRG equ 0FAFh ;# ">
+"4886
+[; <" SPBRG1 equ 0FAFh ;# ">
+"4892
+[; <" SPBRGH equ 0FB0h ;# ">
+"4898
+[; <" T3CON equ 0FB1h ;# ">
+"5006
+[; <" TMR3 equ 0FB2h ;# ">
+"5012
+[; <" TMR3L equ 0FB2h ;# ">
+"5018
+[; <" TMR3H equ 0FB3h ;# ">
+"5024
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5105
+[; <" PWM1CON equ 0FB7h ;# ">
+"5174
+[; <" BAUDCON equ 0FB8h ;# ">
+"5179
+[; <" BAUDCTL equ 0FB8h ;# ">
+"5339
+[; <" PSTRCON equ 0FB9h ;# ">
+"5382
+[; <" REFCON0 equ 0FBAh ;# ">
+"5387
+[; <" VREFCON0 equ 0FBAh ;# ">
+"5459
+[; <" REFCON1 equ 0FBBh ;# ">
+"5464
+[; <" VREFCON1 equ 0FBBh ;# ">
+"5594
+[; <" REFCON2 equ 0FBCh ;# ">
+"5599
+[; <" VREFCON2 equ 0FBCh ;# ">
+"5679
+[; <" CCP1CON equ 0FBDh ;# ">
+"5760
+[; <" CCPR1 equ 0FBEh ;# ">
+"5766
+[; <" CCPR1L equ 0FBEh ;# ">
+"5772
+[; <" CCPR1H equ 0FBFh ;# ">
+"5778
+[; <" ADCON2 equ 0FC0h ;# ">
+"5848
+[; <" ADCON1 equ 0FC1h ;# ">
+"5894
+[; <" ADCON0 equ 0FC2h ;# ">
+"6016
+[; <" ADRES equ 0FC3h ;# ">
+"6022
+[; <" ADRESL equ 0FC3h ;# ">
+"6028
+[; <" ADRESH equ 0FC4h ;# ">
+"6034
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6095
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6164
+[; <" SSPSTAT equ 0FC7h ;# ">
+"6403
+[; <" SSPADD equ 0FC8h ;# ">
+"6409
+[; <" SSPBUF equ 0FC9h ;# ">
+"6415
+[; <" T2CON equ 0FCAh ;# ">
+"6485
+[; <" PR2 equ 0FCBh ;# ">
+"6490
+[; <" MEMCON equ 0FCBh ;# ">
+"6594
+[; <" TMR2 equ 0FCCh ;# ">
+"6600
+[; <" T1CON equ 0FCDh ;# ">
+"6704
+[; <" TMR1 equ 0FCEh ;# ">
+"6710
+[; <" TMR1L equ 0FCEh ;# ">
+"6716
+[; <" TMR1H equ 0FCFh ;# ">
+"6722
+[; <" RCON equ 0FD0h ;# ">
+"6854
+[; <" WDTCON equ 0FD1h ;# ">
+"6881
+[; <" OSCCON2 equ 0FD2h ;# ">
+"6912
+[; <" OSCCON equ 0FD3h ;# ">
+"6990
+[; <" T0CON equ 0FD5h ;# ">
+"7059
+[; <" TMR0 equ 0FD6h ;# ">
+"7065
+[; <" TMR0L equ 0FD6h ;# ">
+"7071
+[; <" TMR0H equ 0FD7h ;# ">
+"7077
+[; <" STATUS equ 0FD8h ;# ">
+"7155
+[; <" FSR2 equ 0FD9h ;# ">
+"7161
+[; <" FSR2L equ 0FD9h ;# ">
+"7167
+[; <" FSR2H equ 0FDAh ;# ">
+"7173
+[; <" PLUSW2 equ 0FDBh ;# ">
+"7179
+[; <" PREINC2 equ 0FDCh ;# ">
+"7185
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"7191
+[; <" POSTINC2 equ 0FDEh ;# ">
+"7197
+[; <" INDF2 equ 0FDFh ;# ">
+"7203
+[; <" BSR equ 0FE0h ;# ">
+"7209
+[; <" FSR1 equ 0FE1h ;# ">
+"7215
+[; <" FSR1L equ 0FE1h ;# ">
+"7221
+[; <" FSR1H equ 0FE2h ;# ">
+"7227
+[; <" PLUSW1 equ 0FE3h ;# ">
+"7233
+[; <" PREINC1 equ 0FE4h ;# ">
+"7239
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"7245
+[; <" POSTINC1 equ 0FE6h ;# ">
+"7251
+[; <" INDF1 equ 0FE7h ;# ">
+"7257
+[; <" WREG equ 0FE8h ;# ">
+"7268
+[; <" FSR0 equ 0FE9h ;# ">
+"7274
+[; <" FSR0L equ 0FE9h ;# ">
+"7280
+[; <" FSR0H equ 0FEAh ;# ">
+"7286
+[; <" PLUSW0 equ 0FEBh ;# ">
+"7292
+[; <" PREINC0 equ 0FECh ;# ">
+"7298
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"7304
+[; <" POSTINC0 equ 0FEEh ;# ">
+"7310
+[; <" INDF0 equ 0FEFh ;# ">
+"7316
+[; <" INTCON3 equ 0FF0h ;# ">
+"7407
+[; <" INTCON2 equ 0FF1h ;# ">
+"7476
+[; <" INTCON equ 0FF2h ;# ">
+"7622
+[; <" PROD equ 0FF3h ;# ">
+"7628
+[; <" PRODL equ 0FF3h ;# ">
+"7634
+[; <" PRODH equ 0FF4h ;# ">
+"7640
+[; <" TABLAT equ 0FF5h ;# ">
+"7648
+[; <" TBLPTR equ 0FF6h ;# ">
+"7654
+[; <" TBLPTRL equ 0FF6h ;# ">
+"7660
+[; <" TBLPTRH equ 0FF7h ;# ">
+"7666
+[; <" TBLPTRU equ 0FF8h ;# ">
+"7674
+[; <" PCLAT equ 0FF9h ;# ">
+"7681
+[; <" PC equ 0FF9h ;# ">
+"7687
+[; <" PCL equ 0FF9h ;# ">
+"7693
+[; <" PCLATH equ 0FFAh ;# ">
+"7699
+[; <" PCLATU equ 0FFBh ;# ">
+"7705
+[; <" STKPTR equ 0FFCh ;# ">
+"7778
+[; <" TOS equ 0FFDh ;# ">
+"7784
+[; <" TOSL equ 0FFDh ;# ">
+"7790
+[; <" TOSH equ 0FFEh ;# ">
+"7796
+[; <" TOSU equ 0FFFh ;# ">
+"70 main.c
+[v _state `Vuc ~T0 @X0 1 e ]
+[i _state
+-> -> 0 `i `uc
+]
+"71
+[v _timestamping `uc ~T0 @X0 1 e ]
+[i _timestamping
+-> -> 0 `i `uc
+]
+"81
+[v _parseHex `(uc ~T0 @X0 1 ef3`*uc`uc`*ul ]
+{
+[e :U _parseHex ]
+[v _line `*uc ~T0 @X0 1 r1 ]
+[v _len `uc ~T0 @X0 1 r2 ]
+[v _value `*ul ~T0 @X0 1 r3 ]
+[f ]
+"82
+[e = *U _value -> -> -> 0 `i `l `ul ]
+"83
+[e $U 490  ]
+[e :U 491 ]
+{
+"84
+[e $ ! == -> *U _line `i -> 0 `i 493  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 489  ]
+[e :U 493 ]
+"85
+[e =<< *U _value -> 4 `i ]
+"86
+[e $ ! && >= -> *U _line `ui -> 48 `ui <= -> *U _line `ui -> 57 `ui 494  ]
+{
+"87
+[e =+ *U _value -> - -> *U _line `ui -> 48 `ui `ul ]
+"88
+}
+[e $U 495  ]
+[e :U 494 ]
+[e $ ! && >= -> *U _line `ui -> 65 `ui <= -> *U _line `ui -> 70 `ui 496  ]
+{
+"89
+[e =+ *U _value -> + - -> *U _line `ui -> 65 `ui -> -> 10 `i `ui `ul ]
+"90
+}
+[e $U 497  ]
+[e :U 496 ]
+[e $ ! && >= -> *U _line `ui -> 97 `ui <= -> *U _line `ui -> 102 `ui 498  ]
+{
+"91
+[e =+ *U _value -> + - -> *U _line `ui -> 97 `ui -> -> 10 `i `ui `ul ]
+"92
+}
+[e $U 499  ]
+[e :U 498 ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 489  ]
+[e :U 499 ]
+[e :U 497 ]
+[e :U 495 ]
+"93
+[e ++ _line * -> -> 1 `i `x -> -> # *U _line `i `x ]
+"94
+}
+[e :U 490 ]
+"83
+[e $ != -> -- _len -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 491  ]
+[e :U 492 ]
+"95
+[e ) -> -> 1 `i `uc ]
+[e $UE 489  ]
+"96
+[e :UE 489 ]
+}
+"104
+[v _sendHex `(v ~T0 @X0 1 ef2`ul`uc ]
+{
+[e :U _sendHex ]
+[v _value `ul ~T0 @X0 1 r1 ]
+[v _len `uc ~T0 @X0 1 r2 ]
+[f ]
+"106
+[v _s `uc ~T0 @X0 -> 20 `i a ]
+"107
+[e = *U + &U _s * -> _len `ux -> -> # *U &U _s `ui `ux -> -> 0 `i `uc ]
+"109
+[e $U 501  ]
+[e :U 502 ]
+{
+"111
+[v _hex `uc ~T0 @X0 1 a ]
+[e = _hex -> & _value -> -> -> 15 `i `l `ul `uc ]
+"112
+[e $ ! > -> _hex `i -> 9 `i 504  ]
+[e = _hex -> + -> - -> _hex `i -> 10 `i `ui -> 65 `ui `uc ]
+[e $U 505  ]
+"113
+[e :U 504 ]
+[e = _hex -> + -> _hex `ui -> 48 `ui `uc ]
+[e :U 505 ]
+"114
+[e = *U + &U _s * -> _len `ux -> -> # *U &U _s `ui `ux _hex ]
+"116
+[e = _value >> _value -> 4 `i ]
+"117
+}
+[e :U 501 ]
+"109
+[e $ != -> -- _len -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 502  ]
+[e :U 503 ]
+"119
+[e ( _usb_putstr (1 &U _s ]
+"121
+[e :UE 500 ]
+}
+"128
+[v _sendByteHex `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _sendByteHex ]
+[v _value `uc ~T0 @X0 1 r1 ]
+[f ]
+"130
+[e ( _sendHex (2 , -> _value `ul -> -> 2 `i `uc ]
+"131
+[e :UE 506 ]
+}
+"138
+[v _transmitStd `(uc ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _transmitStd ]
+[v _line `*uc ~T0 @X0 1 r1 ]
+[f ]
+"139
+[v _canmsg `S487 ~T0 @X0 1 a ]
+"140
+[v _temp `ul ~T0 @X0 1 a ]
+"141
+[v _idlen `uc ~T0 @X0 1 a ]
+"143
+[e = . . _canmsg 1 0 -> -> || == -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `ui -> 114 `ui == -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `ui -> 82 `ui `i `uc ]
+"146
+[e $ ! < -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `ui -> 90 `ui 508  ]
+{
+"147
+[e = . . _canmsg 1 1 -> -> 1 `i `uc ]
+"148
+[e = _idlen -> -> 8 `i `uc ]
+"149
+}
+[e $U 509  ]
+[e :U 508 ]
+{
+"150
+[e = . . _canmsg 1 1 -> -> 0 `i `uc ]
+"151
+[e = _idlen -> -> 3 `i `uc ]
+"152
+}
+[e :U 509 ]
+"154
+[e $ ! ! != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x _idlen &U _temp `i -> -> -> 0 `i `uc `i 510  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 507  ]
+[e :U 510 ]
+"155
+[e = . _canmsg 0 _temp ]
+"157
+[e $ ! ! != -> ( _parseHex (3 , , &U *U + _line * -> + -> 1 `i -> _idlen `i `x -> -> # *U _line `i `x -> -> 1 `i `uc &U _temp `i -> -> -> 0 `i `uc `i 511  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 507  ]
+[e :U 511 ]
+"158
+[e = . _canmsg 2 -> _temp `uc ]
+"160
+[e $ ! ! != -> . . _canmsg 1 0 `i -> -> -> 0 `i `uc `i 512  ]
+{
+"161
+[v _i `uc ~T0 @X0 1 a ]
+"162
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 516  ]
+[e :U 513 ]
+{
+"163
+[e $ ! ! != -> ( _parseHex (3 , , &U *U + _line * -> + + -> _idlen `i -> 2 `i * -> _i `i -> 2 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _temp `i -> -> -> 0 `i `uc `i 517  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 507  ]
+[e :U 517 ]
+"164
+[e = *U + &U . _canmsg 3 * -> _i `ux -> -> # *U &U . _canmsg 3 `ui `ux -> _temp `uc ]
+"165
+}
+"162
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 516 ]
+[e $ < -> _i `i -> . _canmsg 2 `i 513  ]
+[e :U 514 ]
+"165
+}
+"166
+}
+[e :U 512 ]
+"168
+[e ) ( _mcp2515_send_message (1 &U _canmsg ]
+[e $UE 507  ]
+"169
+[e :UE 507 ]
+}
+"176
+[v _parseLine `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _parseLine ]
+[v _line `*uc ~T0 @X0 1 r1 ]
+[f ]
+"178
+[v _result `uc ~T0 @X0 1 a ]
+[e = _result -> -> 7 `i `uc ]
+"180
+[e $U 520  ]
+{
+"181
+[e :U 521 ]
+"182
+[e $ ! == -> _state `i -> 0 `i 522  ]
+"183
+{
+"184
+[e $U 524  ]
+{
+"185
+[e :U 525 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 251 `i `uc -> -> 173 `i `uc -> -> 6 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"186
+[e :U 526 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 221 `i `uc -> -> 173 `i `uc -> -> 6 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"187
+[e :U 527 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 203 `i `uc -> -> 173 `i `uc -> -> 6 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"188
+[e :U 528 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 197 `i `uc -> -> 173 `i `uc -> -> 6 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"189
+[e :U 529 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 197 `i `uc -> -> 164 `i `uc -> -> 4 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"190
+[e :U 530 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 194 `i `uc -> -> 164 `i `uc -> -> 4 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"191
+[e :U 531 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 193 `i `uc -> -> 154 `i `uc -> -> 3 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"192
+[e :U 532 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 192 `i `uc -> -> 163 `i `uc -> -> 4 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"193
+[e :U 533 ]
+[e ( _mcp2515_set_bittiming (3 , , -> -> 192 `i `uc -> -> 154 `i `uc -> -> 3 `i `uc ]
+[e = _result -> -> 13 `i `uc ]
+[e $U 523  ]
+"194
+}
+[e $U 523  ]
+"184
+[e :U 524 ]
+[e [\ *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x , $ -> -> 48 `ui `uc 525
+ , $ -> -> 49 `ui `uc 526
+ , $ -> -> 50 `ui `uc 527
+ , $ -> -> 51 `ui `uc 528
+ , $ -> -> 52 `ui `uc 529
+ , $ -> -> 53 `ui `uc 530
+ , $ -> -> 54 `ui `uc 531
+ , $ -> -> 55 `ui `uc 532
+ , $ -> -> 56 `ui `uc 533
+ 523 ]
+"194
+[e :U 523 ]
+"196
+}
+[e :U 522 ]
+"197
+[e $U 519  ]
+"198
+[e :U 534 ]
+"199
+[e $ ! == -> _state `i -> 0 `i 535  ]
+"200
+{
+"201
+[v _cnf1 `ul ~T0 @X0 1 a ]
+[v _cnf2 `ul ~T0 @X0 1 a ]
+[v _cnf3 `ul ~T0 @X0 1 a ]
+"202
+[e $ ! && && != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _cnf1 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 3 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _cnf2 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 5 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _cnf3 `i -> -> -> 0 `i `uc `i 536  ]
+{
+"203
+[e ( _mcp2515_set_bittiming (3 , , -> _cnf1 `uc -> _cnf2 `uc -> _cnf3 `uc ]
+"204
+[e = _result -> -> 13 `i `uc ]
+"205
+}
+[e :U 536 ]
+"206
+}
+[e :U 535 ]
+"207
+[e $U 519  ]
+"208
+[e :U 537 ]
+"209
+{
+"210
+[v _address `ul ~T0 @X0 1 a ]
+"211
+[e $ ! != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _address `i -> -> -> 0 `i `uc `i 538  ]
+{
+"212
+[v _value `uc ~T0 @X0 1 a ]
+[e = _value ( _mcp2515_read_register (1 -> _address `uc ]
+"213
+[e ( _sendByteHex (1 _value ]
+"214
+[e = _result -> -> 13 `i `uc ]
+"215
+}
+[e :U 538 ]
+"216
+}
+"217
+[e $U 519  ]
+"218
+[e :U 539 ]
+"219
+{
+"220
+[v _address `ul ~T0 @X0 1 a ]
+[v _data `ul ~T0 @X0 1 a ]
+"221
+[e $ ! && != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _address `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 3 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _data `i -> -> -> 0 `i `uc `i 540  ]
+{
+"222
+[e ( _mcp2515_write_register (2 , -> _address `uc -> _data `uc ]
+"223
+[e = _result -> -> 13 `i `uc ]
+"224
+}
+[e :U 540 ]
+"226
+}
+"227
+[e $U 519  ]
+"228
+[e :U 541 ]
+"229
+{
+"230
+[e ( _usb_putch (1 -> -> 86 `ui `uc ]
+"231
+[e ( _sendByteHex (1 -> -> 1 `i `uc ]
+"232
+[e ( _sendByteHex (1 -> -> 0 `i `uc ]
+"233
+[e = _result -> -> 13 `i `uc ]
+"234
+}
+"235
+[e $U 519  ]
+"236
+[e :U 542 ]
+"237
+{
+"238
+[e ( _usb_putch (1 -> -> 118 `ui `uc ]
+"239
+[e ( _sendByteHex (1 -> -> 1 `i `uc ]
+"240
+[e ( _sendByteHex (1 -> -> 4 `i `uc ]
+"241
+[e = _result -> -> 13 `i `uc ]
+"242
+}
+"243
+[e $U 519  ]
+"244
+[e :U 543 ]
+"245
+{
+"246
+[e ( _usb_putch (1 -> -> 78 `ui `uc ]
+"247
+[e ( _sendHex (2 , -> -> 65535 `ui `ul -> -> 4 `i `uc ]
+"248
+[e = _result -> -> 13 `i `uc ]
+"249
+}
+"250
+[e $U 519  ]
+"251
+[e :U 544 ]
+"252
+[e $ ! == -> _state `i -> 0 `i 545  ]
+"253
+{
+"254
+[e ( _mcp2515_bit_modify (3 , , -> -> 15 `i `uc -> -> 224 `i `uc -> -> 0 `i `uc ]
+"256
+[e ( _clock_reset ..  ]
+"258
+[e = _state -> -> 1 `i `uc ]
+"259
+[e = _result -> -> 13 `i `uc ]
+"260
+}
+[e :U 545 ]
+"261
+[e $U 519  ]
+"262
+[e :U 546 ]
+"263
+[e $ ! == -> _state `i -> 0 `i 547  ]
+"264
+{
+"265
+[e ( _mcp2515_bit_modify (3 , , -> -> 15 `i `uc -> -> 224 `i `uc -> -> 64 `i `uc ]
+"267
+[e = _state -> -> 1 `i `uc ]
+"268
+[e = _result -> -> 13 `i `uc ]
+"269
+}
+[e :U 547 ]
+"270
+[e $U 519  ]
+"271
+[e :U 548 ]
+"272
+[e $ ! == -> _state `i -> 0 `i 549  ]
+"273
+{
+"274
+[e ( _mcp2515_bit_modify (3 , , -> -> 15 `i `uc -> -> 224 `i `uc -> -> 96 `i `uc ]
+"276
+[e = _state -> -> 2 `i `uc ]
+"277
+[e = _result -> -> 13 `i `uc ]
+"278
+}
+[e :U 549 ]
+"279
+[e $U 519  ]
+"280
+[e :U 550 ]
+"281
+[e $ ! != -> _state `i -> 0 `i 551  ]
+"282
+{
+"283
+[e ( _mcp2515_bit_modify (3 , , -> -> 15 `i `uc -> -> 224 `i `uc -> -> 128 `i `uc ]
+"285
+[e = _state -> -> 0 `i `uc ]
+"286
+[e = _result -> -> 13 `i `uc ]
+"287
+}
+[e :U 551 ]
+"288
+[e $U 519  ]
+"289
+[e :U 552 ]
+"290
+[e :U 553 ]
+"291
+[e :U 554 ]
+"292
+[e :U 555 ]
+"293
+[e $ ! == -> _state `i -> 1 `i 556  ]
+"294
+{
+"295
+[e $ ! != -> ( _transmitStd (1 _line `i -> -> -> 0 `i `uc `i 557  ]
+{
+"296
+[e $ ! < -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `ui -> 90 `ui 558  ]
+[e ( _usb_putch (1 -> -> 90 `ui `uc ]
+[e $U 559  ]
+"297
+[e :U 558 ]
+[e ( _usb_putch (1 -> -> 122 `ui `uc ]
+[e :U 559 ]
+"298
+[e = _result -> -> 13 `i `uc ]
+"299
+}
+[e :U 557 ]
+"301
+}
+[e :U 556 ]
+"302
+[e $U 519  ]
+"303
+[e :U 560 ]
+"304
+{
+"305
+[v _flags `uc ~T0 @X0 1 a ]
+[e = _flags ( _mcp2515_read_register (1 -> -> 45 `i `uc ]
+"306
+[v _status `uc ~T0 @X0 1 a ]
+[e = _status -> -> 0 `i `uc ]
+"308
+[e $ ! != & -> _flags `i -> 1 `i -> 0 `i 561  ]
+[e =| _status -> -> 4 `i `uc ]
+[e :U 561 ]
+"309
+[e $ ! != & -> _flags `i -> 192 `i -> 0 `i 562  ]
+[e =| _status -> -> 8 `i `uc ]
+[e :U 562 ]
+"310
+[e $ ! != & -> _flags `i -> 24 `i -> 0 `i 563  ]
+[e =| _status -> -> 32 `i `uc ]
+[e :U 563 ]
+"311
+[e $ ! != & -> _flags `i -> 32 `i -> 0 `i 564  ]
+[e =| _status -> -> 128 `i `uc ]
+[e :U 564 ]
+"313
+[e ( _usb_putch (1 -> -> 70 `ui `uc ]
+"314
+[e ( _sendByteHex (1 _status ]
+"315
+[e = _result -> -> 13 `i `uc ]
+"316
+}
+"317
+[e $U 519  ]
+"318
+[e :U 565 ]
+"319
+{
+"320
+[v _stamping `ul ~T0 @X0 1 a ]
+"321
+[e $ ! != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 1 `i `uc &U _stamping `i -> -> -> 0 `i `uc `i 566  ]
+{
+"322
+[e = _timestamping -> -> != _stamping -> -> -> 0 `i `l `ul `i `uc ]
+"323
+[e = _result -> -> 13 `i `uc ]
+"324
+}
+[e :U 566 ]
+"325
+}
+"326
+[e $U 519  ]
+"327
+[e :U 567 ]
+"328
+[e $ ! == -> _state `i -> 0 `i 568  ]
+"329
+{
+"330
+[v _am0 `ul ~T0 @X0 1 a ]
+[v _am1 `ul ~T0 @X0 1 a ]
+[v _am2 `ul ~T0 @X0 1 a ]
+[v _am3 `ul ~T0 @X0 1 a ]
+"331
+[e $ ! && && && != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _am0 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 3 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _am1 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 5 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _am2 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 7 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _am3 `i -> -> -> 0 `i `uc `i 569  ]
+{
+"332
+[e ( _mcp2515_set_SJA1000_filter_mask (4 , , , -> _am0 `uc -> _am1 `uc -> _am2 `uc -> _am3 `uc ]
+"333
+[e = _result -> -> 13 `i `uc ]
+"334
+}
+[e :U 569 ]
+"335
+}
+[e :U 568 ]
+"336
+[e $U 519  ]
+"337
+[e :U 570 ]
+"338
+[e $ ! == -> _state `i -> 0 `i 571  ]
+"339
+{
+"340
+[v _ac0 `ul ~T0 @X0 1 a ]
+[v _ac1 `ul ~T0 @X0 1 a ]
+[v _ac2 `ul ~T0 @X0 1 a ]
+[v _ac3 `ul ~T0 @X0 1 a ]
+"341
+[e $ ! && && && != -> ( _parseHex (3 , , &U *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _ac0 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 3 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _ac1 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 5 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _ac2 `i -> -> -> 0 `i `uc `i != -> ( _parseHex (3 , , &U *U + _line * -> -> 7 `i `x -> -> # *U _line `i `x -> -> 2 `i `uc &U _ac3 `i -> -> -> 0 `i `uc `i 572  ]
+{
+"342
+[e ( _mcp2515_set_SJA1000_filter_code (4 , , , -> _ac0 `uc -> _ac1 `uc -> _ac2 `uc -> _ac3 `uc ]
+"343
+[e = _result -> -> 13 `i `uc ]
+"344
+}
+[e :U 572 ]
+"345
+}
+[e :U 571 ]
+"346
+[e $U 519  ]
+"348
+}
+[e $U 519  ]
+"180
+[e :U 520 ]
+[e [\ *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x , $ -> -> 83 `ui `uc 521
+ , $ -> -> 115 `ui `uc 534
+ , $ -> -> 71 `ui `uc 537
+ , $ -> -> 87 `ui `uc 539
+ , $ -> -> 86 `ui `uc 541
+ , $ -> -> 118 `ui `uc 542
+ , $ -> -> 78 `ui `uc 543
+ , $ -> -> 79 `ui `uc 544
+ , $ -> -> 108 `ui `uc 546
+ , $ -> -> 76 `ui `uc 548
+ , $ -> -> 67 `ui `uc 550
+ , $ -> -> 114 `ui `uc 552
+ , $ -> -> 82 `ui `uc 553
+ , $ -> -> 116 `ui `uc 554
+ , $ -> -> 84 `ui `uc 555
+ , $ -> -> 70 `ui `uc 560
+ , $ -> -> 90 `ui `uc 565
+ , $ -> -> 109 `ui `uc 567
+ , $ -> -> 77 `ui `uc 570
+ 519 ]
+"348
+[e :U 519 ]
+"350
+[e ( _usb_putch (1 _result ]
+"351
+[e :UE 518 ]
+}
+"357
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"360
+[e ( _mcp2515_init ..  ]
+"363
+[e = _OSCCON -> -> 48 `i `uc ]
+"366
+[e = _ANSEL -> -> 0 `i `uc ]
+"367
+[e = _ANSELH -> -> 0 `i `uc ]
+"368
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+"369
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+"372
+[e ( _clock_init ..  ]
+"373
+[e ( _usb_init ..  ]
+"375
+[v _line `uc ~T0 @X0 -> 100 `i a ]
+"376
+[v _linepos `uc ~T0 @X0 1 a ]
+[e = _linepos -> -> 0 `i `uc ]
+"378
+[e :U 575 ]
+{
+"381
+[e ( _usb_process ..  ]
+"382
+[e ( _clock_process ..  ]
+"385
+[e $U 577  ]
+[e :U 578 ]
+{
+"386
+[v _ch `uc ~T0 @X0 1 a ]
+[e = _ch ( _usb_getch ..  ]
+"388
+[e $ ! == -> _ch `i -> 13 `i 580  ]
+{
+"389
+[e = *U + &U _line * -> _linepos `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
+"390
+[e ( _parseLine (1 &U _line ]
+"391
+[e = _linepos -> -> 0 `i `uc ]
+"392
+}
+[e $U 581  ]
+[e :U 580 ]
+[e $ ! != -> _ch `i -> 10 `i 582  ]
+{
+"393
+[e = *U + &U _line * -> _linepos `ux -> -> # *U &U _line `ui `ux _ch ]
+"394
+[e $ ! < -> _linepos `i - -> 100 `i -> 1 `i 583  ]
+[e ++ _linepos -> -> 1 `i `uc ]
+[e :U 583 ]
+"395
+}
+[e :U 582 ]
+"397
+[e :U 581 ]
+}
+[e :U 577 ]
+"385
+[e $ != -> ( _usb_chReceived ..  `i -> -> -> 0 `i `uc `i 578  ]
+[e :U 579 ]
+"400
+[e $ ! && != -> _state `i -> 0 `i ! != -> . . _PORTCbits 0 2 `i -> -> -> 0 `i `Vuc `i 584  ]
+{
+"402
+[v _canmsg `S487 ~T0 @X0 1 a ]
+"404
+[e $U 585  ]
+[e :U 586 ]
+{
+"405
+[v _type `uc ~T0 @X0 1 a ]
+"406
+[v _idlen `uc ~T0 @X0 1 a ]
+"407
+[v _timestamp `us ~T0 @X0 1 a ]
+[e = _timestamp ( _clock_getMS ..  ]
+"409
+[e $ ! != -> . . _canmsg 1 0 `i -> -> -> 0 `i `uc `i 588  ]
+[e = _type -> -> 114 `ui `uc ]
+[e $U 589  ]
+"410
+[e :U 588 ]
+[e = _type -> -> 116 `ui `uc ]
+[e :U 589 ]
+"412
+[e $ ! != -> . . _canmsg 1 1 `i -> -> -> 0 `i `uc `i 590  ]
+{
+"413
+[e =- _type -> - -> 97 `ui -> 65 `ui `uc ]
+"414
+[e = _idlen -> -> 8 `i `uc ]
+"415
+}
+[e $U 591  ]
+[e :U 590 ]
+{
+"416
+[e = _idlen -> -> 3 `i `uc ]
+"417
+}
+[e :U 591 ]
+"419
+[e ( _usb_putch (1 _type ]
+"420
+[e ( _sendHex (2 , . _canmsg 0 _idlen ]
+"422
+[e ( _sendHex (2 , -> . _canmsg 2 `ul -> -> 1 `i `uc ]
+"424
+[e $ ! ! != -> . . _canmsg 1 0 `i -> -> -> 0 `i `uc `i 592  ]
+{
+"425
+[v _i `uc ~T0 @X0 1 a ]
+"426
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 596  ]
+[e :U 593 ]
+{
+"427
+[e ( _sendHex (2 , -> *U + &U . _canmsg 3 * -> _i `ux -> -> # *U &U . _canmsg 3 `ui `ux `ul -> -> 2 `i `uc ]
+"428
+}
+"426
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 596 ]
+[e $ < -> _i `i -> . _canmsg 2 `i 593  ]
+[e :U 594 ]
+"428
+}
+"429
+}
+[e :U 592 ]
+"431
+[e $ ! != -> _timestamping `i -> -> -> 0 `i `uc `i 597  ]
+{
+"432
+[e ( _sendHex (2 , -> _timestamp `ul -> -> 4 `i `uc ]
+"433
+}
+[e :U 597 ]
+"435
+[e ( _usb_putch (1 -> -> 13 `i `uc ]
+"436
+}
+[e :U 585 ]
+"404
+[e $ != -> ( _mcp2515_receive_message (1 &U _canmsg `i -> -> -> 0 `i `uc `i 586  ]
+[e :U 587 ]
+"437
+}
+[e :U 584 ]
+"440
+[e = . . _LATBbits 0 2 -> -> != -> _state `i -> 0 `i `i `uc ]
+"443
+[e $ ! ! != -> . . _PORTAbits 0 3 `i -> -> -> 0 `i `Vuc `i 598  ]
+{
+"444
+[e = _UCON -> -> 0 `i `uc ]
+"445
+[e ( __delay (1 -> -> -> 1000 `i `l `ul ]
+"446
+[; <"  reset ;# ">
+"447
+}
+[e :U 598 ]
+"448
+}
+[e :U 574 ]
+"378
+[e $U 575  ]
+[e :U 576 ]
+"449
+[e :UE 573 ]
+}

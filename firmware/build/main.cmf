@@ -1,0 +1,1206 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 1000 1000 4 1
+$main.obj
+smallconst SMALLCONST 0 1004 1004 A0 1
+text31 CODE 0 28F2 28F2 A 1
+text30 CODE 0 2964 2964 1A 1
+text29 CODE 0 28FC 28FC A 1
+text28 CODE 0 2AE0 2AE0 46 1
+text27 CODE 0 2906 2906 E 1
+text26 CODE 0 297E 297E 1A 1
+text25 CODE 0 2E58 2E58 A6 1
+text24 CODE 0 29B6 29B6 20 1
+text23 CODE 0 2922 2922 16 1
+text22 CODE 0 37E6 37E6 2B0 1
+text21 CODE 0 2998 2998 1E 1
+text20 CODE 0 2B86 2B86 88 1
+text19 CODE 0 2B26 2B26 60 1
+text18 CODE 0 29D6 29D6 22 1
+text17 CODE 0 2C98 2C98 90 1
+text16 CODE 0 2A3E 2A3E 30 1
+text15 CODE 0 2EFE 2EFE C8 1
+text14 CODE 0 2D28 2D28 96 1
+text13 CODE 0 33DC 33DC 1FE 1
+text12 CODE 0 2A6E 2A6E 38 1
+text11 CODE 0 2A1A 2A1A 24 1
+text10 CODE 0 2C0E 2C0E 8A 1
+text9 CODE 0 2938 2938 16 1
+text8 CODE 0 294E 294E 16 1
+text7 CODE 0 35DA 35DA 20C 1
+text6 CODE 0 2FC6 2FC6 FC 1
+text5 CODE 0 30C2 30C2 13E 1
+text4 CODE 0 3A96 3A96 56A 1
+text3 CODE 0 2914 2914 E 1
+text2 CODE 0 2AA6 2AA6 3A 1
+text1 CODE 0 2DBE 2DBE 9A 1
+text0 CODE 0 3200 3200 1DC 1
+cstackCOMRAM COMRAM 1 1 1 39 1
+cstackBANK0 BANK0 1 60 60 40 1
+cstackBANK1 BANK1 1 181 181 79 1
+bssBANK1 BANK1 1 100 100 81 1
+bssCOMRAM COMRAM 1 3A 3A 19 1
+cinit CODE 0 29F8 29F8 22 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 00A0-00FF 1
+BANK1 01FA-01FF 1
+BANK2 0220-027F 1
+BANK2 0290-0297 1
+BANK2 02E8-02FF 1
+BIGRAM 0053-005F 1
+BIGRAM 00A0-00FF 1
+BIGRAM 01FA-01FF 1
+BIGRAM 0220-027F 1
+BIGRAM 0290-0297 1
+BIGRAM 02E8-02FF 1
+CODE 10A4-28F1 1
+COMRAM 0053-005F 1
+CONFIG 300000-30000D 1
+CONST 10A4-28F1 1
+EEDATA F00000-F000FF 1
+FARRAM 0000-0000 1
+IDLOC 200000-200007 1
+MEDIUMCONST 10A4-28F1 1
+RAM 00A0-00FF 1
+RAM 01FA-01FF 1
+RAM 0220-027F 1
+RAM 0290-0297 1
+RAM 02E8-02FF 1
+SFR 0F53-0FFF 1
+SMALLCONST 10A4-28F1 1
+STACK 00A0-00FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$main.obj
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":54 28F2 text31 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":55 28F2 text31 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":56 28FA text31 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":30 28FC text29 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":32 28FC text29 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":35 2900 text29 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":36 2904 text29 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":30 2906 text27 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":31 2908 text27 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":32 290C text27 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":33 2910 text27 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":34 2912 text27 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":394 2914 text3 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":395 2914 text3 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":259 2922 text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":262 2922 text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":264 2924 text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":265 292A text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":268 2932 text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":270 2934 text23 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":128 2938 text9 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":130 293A text9 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":131 294C text9 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":239 294E text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":242 294E text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":244 2950 text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":245 2956 text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":248 295E text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":250 2960 text8 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":61 2964 text30 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":62 2964 text30 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":63 296C text30 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":64 2974 text30 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":65 297C text30 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":43 297E text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":46 2980 text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":48 2982 text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":49 2988 text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":50 298E text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":53 2994 text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":54 2996 text26 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":63 2998 text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":68 299A text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":70 299C text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":71 29A2 text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":72 29A8 text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":75 29B0 text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":77 29B2 text21 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":90 29B6 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":93 29B8 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":95 29BA text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":96 29C0 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":97 29C6 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":98 29CC text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":101 29D2 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":102 29D4 text24 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":226 29D6 text18 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":228 29D8 text18 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":229 29E2 text18 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":230 29EC text18 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":232 29F6 text18 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1767 29F8 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1769 29F8 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1772 29F8 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1828 29F8 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1829 29FC cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1830 29FE cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1831 29FE cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1832 2A00 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1833 2A02 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1836 2A04 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1837 2A08 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1838 2A0A cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1839 2A0A cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1840 2A0C cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1841 2A0E cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1847 2A10 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1849 2A10 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1850 2A12 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1851 2A14 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.as":1852 2A16 cinit CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":352 2A1A text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":353 2A1A text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":354 2A1C text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":355 2A2A text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":353 2A2E text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":357 2A3A text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":353 2A3C text11 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":288 2A3E text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":290 2A3E text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":291 2A4A text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":293 2A52 text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":294 2A5A text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":296 2A66 text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":297 2A6A text16 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":331 2A6E text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":333 2A70 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":338 2A78 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":339 2A90 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":340 2A92 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":341 2A9E text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":344 2AA0 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":345 2AA4 text12 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":403 2AA6 text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":406 2AA6 text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":407 2ABE text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":408 2AC0 text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":409 2ACC text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":410 2AD2 text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":411 2AD8 text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":412 2ADC text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":413 2ADC text2 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":41 2AE0 text28 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":42 2AE0 text28 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":43 2B04 text28 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":44 2B0C text28 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/clock.c":45 2B10 text28 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":165 2B26 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":172 2B28 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":173 2B34 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":174 2B42 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":175 2B4C text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":178 2B56 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":179 2B62 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":180 2B70 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":181 2B7A text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":183 2B84 text19 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":195 2B86 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":198 2B88 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":199 2B92 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":200 2B9E text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":201 2BA8 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":204 2BB6 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":205 2BC0 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":206 2BCC text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":207 2BD6 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":210 2BE4 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":211 2BEE text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":212 2BF8 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":213 2C02 text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":214 2C0C text20 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":104 2C0E text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":107 2C0E text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":109 2C22 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":111 2C24 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":112 2C2A text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":113 2C36 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":114 2C3C text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":116 2C50 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":109 2C82 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":119 2C8A text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":121 2C96 text10 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":259 2C98 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":260 2C98 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":262 2CA0 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":263 2CA8 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":264 2CB4 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":267 2CBC text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":268 2CC2 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":269 2CE8 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":270 2CF4 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":267 2CFA text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":273 2D0E text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":274 2D12 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":275 2D18 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":277 2D20 text17 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":362 2D28 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":363 2D28 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":364 2D2E text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":365 2D36 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":367 2D3C text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":368 2D40 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":370 2D4A text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":373 2D56 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":374 2D5C text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":375 2D88 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":376 2D8A text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":373 2D96 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":379 2DA0 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":380 2DA4 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":382 2DA8 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":383 2DAE text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":385 2DB6 text14 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":419 2DBE text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":420 2DBE text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":421 2DC4 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":422 2DCA text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":423 2DD0 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":425 2DD6 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":426 2DDC text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":427 2DE2 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":428 2DE8 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":430 2DEE text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":431 2DF4 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":432 2DFA text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":433 2E00 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":435 2E06 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":436 2E0C text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":437 2E12 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":438 2E18 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":440 2E1E text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":441 2E24 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":442 2E2A text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":443 2E30 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":445 2E36 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":446 2E3C text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":447 2E42 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":448 2E48 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":450 2E4E text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":451 2E52 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":452 2E56 text1 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":108 2E58 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":113 2E58 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":114 2E5C text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":115 2E60 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":116 2E64 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":118 2E68 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":119 2E6A text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":120 2E6C text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":121 2E6E text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":122 2E70 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":124 2E72 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":127 2E76 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":128 2E78 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":129 2E7E text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":131 2E80 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":133 2E84 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":136 2E8E text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":137 2E98 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":140 2EA2 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":141 2EAC text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":142 2EB6 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":143 2EC0 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":144 2ECA text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":145 2ED4 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":146 2EDE text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":147 2EE8 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":149 2EF2 text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":151 2EFC text25 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":308 2EFE text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":310 2F00 text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":312 2F02 text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":314 2F20 text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":317 2F3E text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":318 2F5C text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":319 2F7A text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":316 2F98 text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":310 2FAE text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":323 2FC2 text15 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":81 2FC6 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":82 2FC6 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":83 2FD6 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":84 2FD8 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":85 2FEA text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":86 3006 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":87 3028 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":88 302C text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":89 304E text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":90 3052 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":91 3074 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":92 30AC text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":93 30B2 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":83 30B6 text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":95 30BE text6 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":138 30C2 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":143 30C2 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":146 30F4 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":147 3108 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":148 310A text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":149 310E text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":150 310E text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":151 3110 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":154 3114 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":155 313A text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":157 314A text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":158 317E text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":160 3182 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":162 3186 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":163 318C text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":164 31CC text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":162 31E8 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":168 31F2 text5 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":357 3200 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":360 3200 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":363 3204 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":366 3208 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":367 320C text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":368 3210 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":369 3212 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":372 3214 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":373 3218 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":376 321C text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":381 3222 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":382 3226 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":385 322A text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":386 322C text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":388 3234 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":389 323E text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":390 3258 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":391 3268 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":392 326E text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":393 327A text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":394 3296 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":385 32A4 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":400 32AE text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":407 32BA text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":409 32C6 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":410 32D0 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":412 32D6 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":413 32DC text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":414 32E2 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":416 32E6 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":419 32EC text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":420 32F4 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":422 330C text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":424 3320 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":426 3326 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":427 332E text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":426 3362 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":431 3372 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":432 337A text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":433 3392 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":435 3392 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":404 3398 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":440 33AE text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":443 33C8 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":444 33CC text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":445 33D0 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":446 33D8 text0 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":458 33DC text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":460 33DC text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":462 33E0 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":465 33E4 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":469 33E8 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":472 3400 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":473 3406 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":475 340C text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":479 341A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":484 343A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":486 343A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":489 3440 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":491 3444 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":492 3446 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":494 3446 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":495 344A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":500 3454 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":502 3454 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":503 345A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":504 345E text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":509 3462 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":510 3468 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":516 346C text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":517 3472 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":518 3478 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":477 347C text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":534 34BE text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":538 34D0 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":539 34F6 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":544 34FA text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":552 3500 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":553 3506 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":552 352E text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":556 3536 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":562 353A text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":566 353E text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":567 3544 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":535 3548 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":576 356C text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":578 3572 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":579 3578 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":578 35A0 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":581 35A8 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":583 35AC text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":585 35AC text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":586 35B2 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":588 35B8 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":591 35C2 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":592 35C8 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":593 35CC text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":596 35D0 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":600 35D4 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/usb_cdc.c":601 35D6 text13 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":280 35DA text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":282 35DA text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":286 35E0 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":289 35F6 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":290 35FA text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":291 35FE text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":292 3602 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":293 3606 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":294 360A text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":295 360E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":297 3610 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":298 3614 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":301 3614 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":303 3616 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":305 361E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":306 362E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":307 365E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":308 36C2 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":309 36EE text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":310 36FC text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":311 36FE text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":312 372E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":313 374C text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":314 3752 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":318 3758 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":319 3768 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":320 377C text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":321 377E text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":323 3790 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":324 3796 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":323 37B4 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":326 37CA text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":329 37CA text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":331 37CC text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":334 37CE text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":335 37D0 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":336 37D8 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":338 37E0 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":340 37E2 text7 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":349 37E6 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":351 37E6 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":354 37EC text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":355 37F0 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":356 37F4 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":357 37F8 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":358 37FC text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":360 37FE text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":363 3802 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":364 382C text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":367 3852 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":369 3854 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":371 385C text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":372 386C text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":373 38AA text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":374 38BC text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":375 3900 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":376 3940 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":377 397C text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":378 399C text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":379 399E text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":380 39DC text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":381 3A08 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":382 3A0E text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":383 3A14 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":386 3A14 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":387 3A2A text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":389 3A3A text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":390 3A40 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":389 3A60 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":392 3A76 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":395 3A76 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":397 3A78 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":398 3A80 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":399 3A84 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/mcp2515.c":401 3A92 text22 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":176 3A96 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":178 3A96 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":180 3A9C text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":181 3A9E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":182 3A9E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":185 3AA4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":186 3AB4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":187 3AC4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":188 3AD4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":189 3AE4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":190 3AF4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":191 3B04 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":192 3B14 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":193 3B24 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":184 3B34 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":198 3B7A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":199 3B7A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":202 3B7E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":203 3BF0 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":211 3C02 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":212 3C28 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":213 3C34 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":221 3C3E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":222 3C8A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":230 3C98 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":231 3C9E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":232 3CA4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":238 3CAC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":239 3CB2 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":240 3CB8 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":246 3CC0 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":247 3CC6 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":251 3CE0 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":252 3CE0 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":254 3CE4 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":256 3CF2 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":258 3CF8 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":259 3CF8 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":262 3D00 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":263 3D00 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":265 3D04 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":267 3D12 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":271 3D16 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":272 3D16 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":274 3D1A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":276 3D28 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":281 3D2C text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":283 3D32 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":285 3D40 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":293 3D46 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":295 3D4C text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":296 3D5E text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":297 3D7A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":298 3D80 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":305 3D82 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":306 3D8C text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":308 3D92 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":309 3D9C text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":310 3DAC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":311 3DBC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":313 3DC6 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":314 3DCC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":321 3DD6 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":322 3DFC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":327 3E16 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":328 3E16 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":331 3E1A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":332 3EB2 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":337 3EC8 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":338 3EC8 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":341 3ECC text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":342 3F64 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":180 3F7A text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":350 3FF6 text4 CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/main.c":351 3FFE text4 CODE
+$startup.obj
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":59 0 text CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":60 0 text CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":61 0 text CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":63 0 text CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":99 1000 reset_vec CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":107 1000 init CODE
+"/home/jebr224/Desktop/del/USBtin/firmware/source/startup.as":123 1000 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+mcp2515_receive_message@i 10 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_bit_modify@data 3 0 COMRAM 1 cstackCOMRAM main.obj
+_ep 200 0 ABS 1 - main.obj
+parseLine@cnf2 66 0 BANK0 1 cstackBANK0 main.obj
+_mcp2515_bit_modify 29B6 0 CODE 0 text24 main.obj
+__S0 4000 0 ABS 0 - main.obj
+__S1 1FA 0 ABS 0 - main.obj
+__S2 0 0 ABS 0 - main.obj
+__end_of_clock_process 2B26 0 CODE 0 text28 main.obj
+mcp2515_bit_modify@mask 2 0 COMRAM 1 cstackCOMRAM main.obj
+__Hintentry 0 0 ABS 0 intentry main.obj
+__Lintentry 0 0 ABS 0 intentry main.obj
+_UEP0 F53 0 ABS 0 - main.obj
+_UEP1 F54 0 ABS 0 - main.obj
+__end_of_usb_string_product 109E 0 SMALLCONST 0 smallconst main.obj
+_UEP2 F55 0 ABS 0 - main.obj
+_TMR0 FD6 0 ABS 0 - main.obj
+_UEP3 F56 0 ABS 0 - main.obj
+_usb_string_manuf 1048 0 SMALLCONST 0 smallconst main.obj
+mcp2515_read_register@data 3 0 COMRAM 1 cstackCOMRAM main.obj
+_UCFG F61 0 ABS 0 - main.obj
+_usb_handleDescriptorRequest 2EFE 0 CODE 0 text15 main.obj
+usb_sendProcess@length 4 0 COMRAM 1 cstackCOMRAM main.obj
+_UCON F64 0 ABS 0 - main.obj
+usb_txprocess@readpos 2 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_mcp2515_init 0 0 ABS 0 - main.obj
+__end_of_usb_process 35DA 0 CODE 0 text13 main.obj
+_dolinecoding 4C 0 COMRAM 1 bssCOMRAM main.obj
+transmitStd@idlen 15 0 COMRAM 1 cstackCOMRAM main.obj
+usb_loadDescriptor@length A 0 COMRAM 1 cstackCOMRAM main.obj
+_main 3200 0 CODE 0 text0 main.obj
+___sp 0 0 STACK 2 stack startup.obj
+start 1000 0 CODE 0 init startup.obj
+__end_of_clock_init 2906 0 CODE 0 text29 main.obj
+sendHex@s 20 0 COMRAM 1 cstackCOMRAM main.obj
+transmitStd@temp 17 0 COMRAM 1 cstackCOMRAM main.obj
+__Hirdata 0 0 CODE 0 irdata main.obj
+__Lirdata 0 0 CODE 0 irdata main.obj
+__HRAM 0 0 ABS 0 - main.obj
+_ANSEL F7E 0 ABS 0 - main.obj
+__LRAM 1 0 ABS 0 - main.obj
+_T0CON FD5 0 ABS 0 - main.obj
+_UADDR F5C 0 ABS 0 - main.obj
+_mcp2515_set_SJA1000_filter_code 2B86 0 CODE 0 text20 main.obj
+_USTAT F63 0 ABS 0 - main.obj
+main@line 181 0 BANK1 1 cstackBANK1 main.obj
+parseLine@stamping 7A 0 BANK0 1 cstackBANK0 main.obj
+__Hconfig 0 0 CONFIG 0 config main.obj
+__Lconfig 0 0 CONFIG 0 config main.obj
+_clock_lastclock 44 0 COMRAM 1 bssCOMRAM main.obj
+mcp2515_receive_message@address 11 0 COMRAM 1 cstackCOMRAM main.obj
+?_clock_getMS 1 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_mcp2515_send_message 0 0 ABS 0 - main.obj
+__size_of_usb_txprocess 0 0 ABS 0 - main.obj
+main@i 1E9 0 BANK1 1 cstackBANK1 main.obj
+__Hbigram 0 0 ABS 0 bigram main.obj
+__Lbigram 0 0 ABS 0 bigram main.obj
+__Hrparam 0 0 ABS 0 rparam main.obj
+__Lrparam 0 0 ABS 0 rparam main.obj
+__Hram 0 0 ABS 0 ram main.obj
+__Lram 0 0 ABS 0 ram main.obj
+__Hcomram 0 0 ABS 0 comram main.obj
+__Lcomram 0 0 ABS 0 comram main.obj
+main@type 1E8 0 BANK1 1 cstackBANK1 main.obj
+_state 4D 0 COMRAM 1 bssCOMRAM main.obj
+spi_transmit@c 1 0 COMRAM 1 cstackCOMRAM main.obj
+__Hsfr 0 0 ABS 0 sfr main.obj
+__Lsfr 0 0 ABS 0 sfr main.obj
+__Hbss 0 0 RAM 1 bss main.obj
+__Lbss 0 0 RAM 1 bss main.obj
+__Hnvrram 0 0 COMRAM 1 nvrram main.obj
+__Lnvrram 0 0 COMRAM 1 nvrram main.obj
+mcp2515_bit_modify@address 4 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_read_register@address 2 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_usb_handleDescriptorRequest 2FC6 0 CODE 0 text15 main.obj
+_parseHex 2FC6 0 CODE 0 text6 main.obj
+_mcp2515_read_register 2998 0 CODE 0 text21 main.obj
+_txbuffer 100 0 BANK1 1 bssBANK1 main.obj
+__size_of_usb_init 0 0 ABS 0 - main.obj
+sendHex@value 17 0 COMRAM 1 cstackCOMRAM main.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data main.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data main.obj
+_LATBbits F8A 0 ABS 0 - main.obj
+_LATCbits F8B 0 ABS 0 - main.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs main.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs main.obj
+mcp2515_send_message@address F 0 COMRAM 1 cstackCOMRAM main.obj
+_UCONbits F64 0 ABS 0 - main.obj
+_usb_init 2DBE 0 CODE 0 text1 main.obj
+parseLine@cnf3 6A 0 BANK0 1 cstackBANK0 main.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss main.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss main.obj
+__Hintret 0 0 ABS 0 intret main.obj
+__Lintret 0 0 ABS 0 intret main.obj
+__Hramtop 300 0 RAM 0 ramtop main.obj
+_usb_config_desc 1005 0 SMALLCONST 0 smallconst main.obj
+__Lramtop 300 0 RAM 0 ramtop main.obj
+__Hstruct 0 0 COMRAM 1 struct main.obj
+__Lstruct 0 0 COMRAM 1 struct main.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata main.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata main.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst main.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst main.obj
+_ANSELH F7F 0 ABS 0 - main.obj
+_timestamping 180 0 BANK1 1 bssBANK1 main.obj
+__Hfarbss 0 0 FARRAM 0 farbss main.obj
+__Lfarbss 0 0 FARRAM 0 farbss main.obj
+__Hintcode 1000 0 CODE 0 intcode main.obj
+_SSPBUF FC9 0 ABS 0 - main.obj
+__Lintcode 1000 0 CODE 0 intcode main.obj
+__Hfardata 0 0 FARRAM 0 fardata main.obj
+__Lfardata 0 0 FARRAM 0 fardata main.obj
+_parseLine 3A96 0 CODE 0 text4 main.obj
+usb_loadDescriptor@size 8 0 COMRAM 1 cstackCOMRAM main.obj
+_OSCCON FD3 0 ABS 0 - main.obj
+__Habs1 0 0 ABS 0 abs1 main.obj
+__Labs1 0 0 ABS 0 abs1 main.obj
+_ep0out_buffer 280 0 ABS 1 - main.obj
+_ep3out_buffer 2A0 0 ABS 1 - main.obj
+__size_of_mcp2515_set_SJA1000_filter_code 0 0 ABS 0 - main.obj
+_spi_transmit 2906 0 CODE 0 text27 main.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM main.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM main.obj
+mcp2515_receive_message@status 12 0 COMRAM 1 cstackCOMRAM main.obj
+transmitStd@i 16 0 COMRAM 1 cstackCOMRAM main.obj
+transmitStd@canmsg 1B 0 COMRAM 1 cstackCOMRAM main.obj
+_usb_getch 2AA6 0 CODE 0 text2 main.obj
+_sendByteHex 2938 0 CODE 0 text9 main.obj
+parseLine@flags 9E 0 BANK0 1 cstackBANK0 main.obj
+_usb_loadDescriptor 2A3E 0 CODE 0 text16 main.obj
+_transmitStd$472 14 0 COMRAM 1 cstackCOMRAM main.obj
+parseLine@address 6E 0 BANK0 1 cstackBANK0 main.obj
+parseLine@ac0 8E 0 BANK0 1 cstackBANK0 main.obj
+_usb_putch 2A6E 0 CODE 0 text12 main.obj
+main@ch 1EA 0 BANK1 1 cstackBANK1 main.obj
+_usb_setaddress 52 0 COMRAM 1 bssCOMRAM main.obj
+__Hdata 0 0 ABS 0 data main.obj
+__Ldata 0 0 ABS 0 data main.obj
+main@idlen 1E7 0 BANK1 1 cstackBANK1 main.obj
+__size_of_spi_transmit 0 0 ABS 0 - main.obj
+__size_of_mcp2515_set_SJA1000_filter_mask 0 0 ABS 0 - main.obj
+stackhi FF 0 ABS 0 - startup.obj
+parseLine@address_484 72 0 BANK0 1 cstackBANK0 main.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 main.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 main.obj
+__end_of_clock_reset 297E 0 CODE 0 text30 main.obj
+__end_of_mcp2515_set_bittiming 29F8 0 CODE 0 text18 main.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 main.obj
+__Htemp 0 0 COMRAM 1 temp main.obj
+__Ltemp 0 0 COMRAM 1 temp main.obj
+stacklo A0 0 ABS 0 - startup.obj
+__Hrbit 0 0 COMRAM 1 rbit main.obj
+__Lrbit 0 0 COMRAM 1 rbit main.obj
+_mcp2515_set_bittiming 29D6 0 CODE 0 text18 main.obj
+__Hinit 1000 0 CODE 0 init main.obj
+__Linit 1000 0 CODE 0 init main.obj
+__Hintcodelo 1000 0 CODE 0 intcodelo main.obj
+__Lintcodelo 1000 0 CODE 0 intcodelo main.obj
+__Hrbss 0 0 COMRAM 1 rbss main.obj
+__end_of_main 33DC 0 CODE 0 text0 main.obj
+__Lrbss 0 0 COMRAM 1 rbss main.obj
+__size_of_usb_getch 0 0 ABS 0 - main.obj
+__Htext 0 0 ABS 0 text main.obj
+__Ltext 0 0 ABS 0 text main.obj
+_usb_getchpos 51 0 COMRAM 1 bssCOMRAM main.obj
+mcp2515_receive_message@temp C 0 COMRAM 1 cstackCOMRAM main.obj
+end_of_initialization 2A10 0 CODE 0 cinit main.obj
+__end_of_usb_init 2E58 0 CODE 0 text1 main.obj
+_SSPCON1 FC6 0 ABS 0 - main.obj
+__end_of_usb_string_0 10A2 0 SMALLCONST 0 smallconst main.obj
+mcp2515_init@dummy 4 0 COMRAM 1 cstackCOMRAM main.obj
+parseLine@ac1 92 0 BANK0 1 cstackBANK0 main.obj
+__size_of_parseLine 0 0 ABS 0 - main.obj
+parseHex@value 4 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_spi_transmit 2914 0 CODE 0 text27 main.obj
+__end_of_usb_dev_desc 1090 0 SMALLCONST 0 smallconst main.obj
+_TRISBbits F93 0 ABS 0 - main.obj
+_TRISCbits F94 0 ABS 0 - main.obj
+_PORTAbits F80 0 ABS 0 - main.obj
+__end_of_mcp2515_rx_status 2938 0 CODE 0 text23 main.obj
+_PORTCbits F82 0 ABS 0 - main.obj
+usb_handleDescriptorRequest@length D 0 COMRAM 1 cstackCOMRAM main.obj
+__Hibigdata 0 0 CODE 0 ibigdata main.obj
+__Libigdata 0 0 CODE 0 ibigdata main.obj
+__size_of_usb_process 0 0 ABS 0 - main.obj
+usb_txprocess@i 1 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_usb_putch 0 0 ABS 0 - main.obj
+usb_getch@ch 1 0 COMRAM 1 cstackCOMRAM main.obj
+__Hifardata 0 0 CODE 0 ifardata main.obj
+__Lifardata 0 0 CODE 0 ifardata main.obj
+__Hbank0 0 0 ABS 0 bank0 main.obj
+__Lbank0 0 0 ABS 0 bank0 main.obj
+__Hbank1 0 0 ABS 0 bank1 main.obj
+__Lbank1 0 0 ABS 0 bank1 main.obj
+__size_of_transmitStd 0 0 ABS 0 - main.obj
+__Hbank2 0 0 ABS 0 bank2 main.obj
+__Lbank2 0 0 ABS 0 bank2 main.obj
+usb_putch@ch 14 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_usb_putstr 0 0 ABS 0 - main.obj
+__Hpowerup 1000 0 CODE 0 powerup main.obj
+_SSPSTAT FC7 0 ABS 0 - main.obj
+__Lpowerup 1000 0 CODE 0 powerup main.obj
+_usb_sendbuffer 41 0 COMRAM 1 bssCOMRAM main.obj
+_txbuffer_writepos 4F 0 COMRAM 1 bssCOMRAM main.obj
+parseLine@ac2 96 0 BANK0 1 cstackBANK0 main.obj
+__Htext0 0 0 ABS 0 text0 main.obj
+__Ltext0 0 0 ABS 0 text0 main.obj
+__Htext1 0 0 ABS 0 text1 main.obj
+__Ltext1 0 0 ABS 0 text1 main.obj
+__ptext0 3200 0 CODE 0 text0 main.obj
+__end_of_usb_string_manuf 107E 0 SMALLCONST 0 smallconst main.obj
+__Htext2 0 0 ABS 0 text2 main.obj
+__Ltext2 0 0 ABS 0 text2 main.obj
+__ptext1 2DBE 0 CODE 0 text1 main.obj
+__Htext3 0 0 ABS 0 text3 main.obj
+__Ltext3 0 0 ABS 0 text3 main.obj
+__ptext2 2AA6 0 CODE 0 text2 main.obj
+_configured 48 0 COMRAM 1 bssCOMRAM main.obj
+__Htext4 0 0 ABS 0 text4 main.obj
+__Ltext4 0 0 ABS 0 text4 main.obj
+__ptext3 2914 0 CODE 0 text3 main.obj
+__Htext5 0 0 ABS 0 text5 main.obj
+__Ltext5 0 0 ABS 0 text5 main.obj
+__ptext4 3A96 0 CODE 0 text4 main.obj
+__Htext6 0 0 ABS 0 text6 main.obj
+__Ltext6 0 0 ABS 0 text6 main.obj
+__ptext5 30C2 0 CODE 0 text5 main.obj
+__end_of_usb_getch 2AE0 0 CODE 0 text2 main.obj
+__Htext7 0 0 ABS 0 text7 main.obj
+mcp2515_send_message@status E 0 COMRAM 1 cstackCOMRAM main.obj
+__Ltext7 0 0 ABS 0 text7 main.obj
+__ptext6 2FC6 0 CODE 0 text6 main.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM main.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM main.obj
+__Htext8 0 0 ABS 0 text8 main.obj
+__Ltext8 0 0 ABS 0 text8 main.obj
+__ptext7 35DA 0 CODE 0 text7 main.obj
+__pbssCOMRAM 3A 0 COMRAM 1 bssCOMRAM main.obj
+__Htext9 0 0 ABS 0 text9 main.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 main.obj
+__Ltext9 0 0 ABS 0 text9 main.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 main.obj
+__ptext8 294E 0 CODE 0 text8 main.obj
+parseLine@line 36 0 COMRAM 1 cstackCOMRAM main.obj
+__ptext9 2938 0 CODE 0 text9 main.obj
+__pcstackBANK1 181 0 BANK1 1 cstackBANK1 main.obj
+__Hclrtext 0 0 ABS 0 clrtext main.obj
+__Lclrtext 0 0 ABS 0 clrtext main.obj
+_usb_config 50 0 COMRAM 1 bssCOMRAM main.obj
+__size_of_usb_handleDescriptorRequest 0 0 ABS 0 - main.obj
+__end_of_sendHex 2C98 0 CODE 0 text10 main.obj
+sendHex@len 1B 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of__initialization 2A10 0 CODE 0 cinit main.obj
+mcp2515_set_bittiming@cnf1 6 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_usb_putch 2AA6 0 CODE 0 text12 main.obj
+mcp2515_set_bittiming@cnf2 4 0 COMRAM 1 cstackCOMRAM main.obj
+_clock_reset 2964 0 CODE 0 text30 main.obj
+__end_of_usb_putstr 2A3E 0 CODE 0 text11 main.obj
+_linecoding 3A 0 COMRAM 1 bssCOMRAM main.obj
+_clock_process 2AE0 0 CODE 0 text28 main.obj
+parseLine@ac3 9A 0 BANK0 1 cstackBANK0 main.obj
+_SSPSTATbits FC7 0 ABS 0 - main.obj
+mcp2515_set_bittiming@cnf3 5 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_mcp2515_send_message 37E6 0 CODE 0 text7 main.obj
+usb_loadDescriptor@descbuffer 6 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_usb_chReceived 0 0 ABS 0 - main.obj
+__end_of_usb_loadDescriptor 2A6E 0 CODE 0 text16 main.obj
+mcp2515_read_status@status 2 0 COMRAM 1 cstackCOMRAM main.obj
+__Hidata 0 0 CODE 0 idata main.obj
+__Lidata 0 0 CODE 0 idata main.obj
+__Hrdata 0 0 COMRAM 1 rdata main.obj
+__Lrdata 0 0 COMRAM 1 rdata main.obj
+__Hidloc 0 0 IDLOC 0 idloc main.obj
+__Lidloc 0 0 IDLOC 0 idloc main.obj
+_usb_txprocess 2D28 0 CODE 0 text14 main.obj
+parseLine@result 9F 0 BANK0 1 cstackBANK0 main.obj
+__size_of_mcp2515_bit_modify 0 0 ABS 0 - main.obj
+__Hstack 0 0 STACK 2 stack main.obj
+__Lstack 0 0 STACK 2 stack main.obj
+_clock_getMS 28F2 0 CODE 0 text31 main.obj
+__size_of_mcp2515_read_status 0 0 ABS 0 - main.obj
+__Hparam 0 0 ABS 0 rparam main.obj
+__Lparam 0 0 ABS 0 rparam main.obj
+__Hspace_0 4000 0 ABS 0 - main.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM main.obj
+__Lspace_0 0 0 ABS 0 - main.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM main.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM main.obj
+_sendHex 2C0E 0 CODE 0 text10 main.obj
+__Hspace_1 1FA 0 ABS 0 - main.obj
+__Lspace_1 0 0 ABS 0 - main.obj
+__Hsmallconst 10A4 0 SMALLCONST 0 smallconst main.obj
+__Lsmallconst 1004 0 SMALLCONST 0 smallconst main.obj
+__psmallconst 1004 0 SMALLCONST 0 smallconst main.obj
+main@canmsg 1EC 0 BANK1 1 cstackBANK1 main.obj
+__size_of_parseHex 0 0 ABS 0 - main.obj
+__Hspace_2 0 0 ABS 0 - main.obj
+__Lspace_2 0 0 ABS 0 - main.obj
+__Hnvbit 0 0 COMRAM 1 nvbit main.obj
+_ep0in_buffer 288 0 ABS 1 - main.obj
+_ep1in_buffer 2A8 0 ABS 1 - main.obj
+__Lnvbit 0 0 COMRAM 1 nvbit main.obj
+_ep2in_buffer 298 0 ABS 1 - main.obj
+__size_of_usb_loadDescriptor 0 0 ABS 0 - main.obj
+__Hcinit 0 0 ABS 0 cinit main.obj
+__Lcinit 0 0 ABS 0 cinit main.obj
+mcp2515_write_register@data 2 0 COMRAM 1 cstackCOMRAM main.obj
+_UIRbits F62 0 ABS 0 - main.obj
+__pcinit 29F8 0 CODE 0 cinit main.obj
+usb_process@i 11 0 COMRAM 1 cstackCOMRAM main.obj
+__ramtop 300 0 RAM 0 ramtop startup.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst startup.obj
+__size_of_main 0 0 ABS 0 - main.obj
+__Hconst 0 0 CODE 0 const main.obj
+__Lconst 0 0 CODE 0 const main.obj
+__size_of_usb_sendProcess 0 0 ABS 0 - main.obj
+__end_of_usb_txprocess 2DBE 0 CODE 0 text14 main.obj
+__end_of_sendByteHex 294E 0 CODE 0 text9 main.obj
+__end_of_usb_config_desc 1048 0 SMALLCONST 0 smallconst main.obj
+_usb_process 33DC 0 CODE 0 text13 main.obj
+__size_of_sendByteHex 0 0 ABS 0 - main.obj
+main@linepos 1EB 0 BANK1 1 cstackBANK1 main.obj
+main@timestamp 1E5 0 BANK1 1 cstackBANK1 main.obj
+parseLine@value 60 0 BANK0 1 cstackBANK0 main.obj
+__size_of_mcp2515_receive_message 0 0 ABS 0 - main.obj
+__size_of_mcp2515_set_bittiming 0 0 ABS 0 - main.obj
+usb_process@i_667 12 0 COMRAM 1 cstackCOMRAM main.obj
+usb_process@i_668 13 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_usb_chReceived 2922 0 CODE 0 text3 main.obj
+mcp2515_send_message@i D 0 COMRAM 1 cstackCOMRAM main.obj
+sendHex@hex 34 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_clock_init 0 0 ABS 0 - main.obj
+mcp2515_set_SJA1000_filter_mask@amr0 7 0 COMRAM 1 cstackCOMRAM main.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 main.obj
+mcp2515_set_SJA1000_filter_mask@amr1 4 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_set_SJA1000_filter_mask@amr2 5 0 COMRAM 1 cstackCOMRAM main.obj
+__LbssBANK1 0 0 ABS 0 bssBANK1 main.obj
+mcp2515_set_SJA1000_filter_mask@amr3 6 0 COMRAM 1 cstackCOMRAM main.obj
+parseLine@am0 7E 0 BANK0 1 cstackBANK0 main.obj
+__pbssBANK1 100 0 BANK1 1 bssBANK1 main.obj
+__Htext10 0 0 ABS 0 text10 main.obj
+__Ltext10 0 0 ABS 0 text10 main.obj
+__Htext20 0 0 ABS 0 text20 main.obj
+__Ltext20 0 0 ABS 0 text20 main.obj
+__ptext10 2C0E 0 CODE 0 text10 main.obj
+__Htext30 0 0 ABS 0 text30 main.obj
+__Htext11 0 0 ABS 0 text11 main.obj
+__Ltext30 0 0 ABS 0 text30 main.obj
+__Ltext11 0 0 ABS 0 text11 main.obj
+__ptext20 2B86 0 CODE 0 text20 main.obj
+__Htext21 0 0 ABS 0 text21 main.obj
+__Ltext21 0 0 ABS 0 text21 main.obj
+__ptext11 2A1A 0 CODE 0 text11 main.obj
+__ptext30 2964 0 CODE 0 text30 main.obj
+__Htext31 0 0 ABS 0 text31 main.obj
+__Htext12 0 0 ABS 0 text12 main.obj
+__Ltext31 0 0 ABS 0 text31 main.obj
+__Ltext12 0 0 ABS 0 text12 main.obj
+__ptext21 2998 0 CODE 0 text21 main.obj
+_usb_chReceived 2914 0 CODE 0 text3 main.obj
+__Htext22 0 0 ABS 0 text22 main.obj
+__Ltext22 0 0 ABS 0 text22 main.obj
+__ptext12 2A6E 0 CODE 0 text12 main.obj
+__ptext31 28F2 0 CODE 0 text31 main.obj
+__size_of_clock_getMS 0 0 ABS 0 - main.obj
+__Htext13 0 0 ABS 0 text13 main.obj
+__Ltext13 0 0 ABS 0 text13 main.obj
+__ptext22 37E6 0 CODE 0 text22 main.obj
+__end_of_clock_getMS 28FC 0 CODE 0 text31 main.obj
+__Htext23 0 0 ABS 0 text23 main.obj
+__Ltext23 0 0 ABS 0 text23 main.obj
+__ptext13 33DC 0 CODE 0 text13 main.obj
+__Htext14 0 0 ABS 0 text14 main.obj
+__Ltext14 0 0 ABS 0 text14 main.obj
+_mcp2515_read_status 294E 0 CODE 0 text8 main.obj
+__ptext23 2922 0 CODE 0 text23 main.obj
+__Htext24 0 0 ABS 0 text24 main.obj
+__Ltext24 0 0 ABS 0 text24 main.obj
+__ptext14 2D28 0 CODE 0 text14 main.obj
+_mcp2515_rx_status 2922 0 CODE 0 text23 main.obj
+_txbuffer_bytesleft 4E 0 COMRAM 1 bssCOMRAM main.obj
+__Htext15 0 0 ABS 0 text15 main.obj
+__Ltext15 0 0 ABS 0 text15 main.obj
+__ptext24 29B6 0 CODE 0 text24 main.obj
+usb_txprocess@count 3 0 COMRAM 1 cstackCOMRAM main.obj
+__size_of_clock_reset 0 0 ABS 0 - main.obj
+__Htext25 0 0 ABS 0 text25 main.obj
+__Ltext25 0 0 ABS 0 text25 main.obj
+__ptext15 2EFE 0 CODE 0 text15 main.obj
+___inthi_sp 0 0 STACK 2 stack startup.obj
+__Htext16 0 0 ABS 0 text16 main.obj
+__Ltext16 0 0 ABS 0 text16 main.obj
+__ptext25 2E58 0 CODE 0 text25 main.obj
+__Htext26 0 0 ABS 0 text26 main.obj
+__Ltext26 0 0 ABS 0 text26 main.obj
+__ptext16 2A3E 0 CODE 0 text16 main.obj
+_clock_msticker 46 0 COMRAM 1 bssCOMRAM main.obj
+__Htext17 0 0 ABS 0 text17 main.obj
+__Ltext17 0 0 ABS 0 text17 main.obj
+__ptext26 297E 0 CODE 0 text26 main.obj
+__Htext27 0 0 ABS 0 text27 main.obj
+__Ltext27 0 0 ABS 0 text27 main.obj
+__ptext17 2C98 0 CODE 0 text17 main.obj
+__end_of_mcp2515_bit_modify 29D6 0 CODE 0 text24 main.obj
+__Htext18 0 0 ABS 0 text18 main.obj
+__Ltext18 0 0 ABS 0 text18 main.obj
+__ptext27 2906 0 CODE 0 text27 main.obj
+__Htext28 0 0 ABS 0 text28 main.obj
+__Ltext28 0 0 ABS 0 text28 main.obj
+__ptext18 29D6 0 CODE 0 text18 main.obj
+__end_of_mcp2515_read_status 2964 0 CODE 0 text8 main.obj
+__Htext19 0 0 ABS 0 text19 main.obj
+__Ltext19 0 0 ABS 0 text19 main.obj
+__ptext28 2AE0 0 CODE 0 text28 main.obj
+__Htext29 0 0 ABS 0 text29 main.obj
+__Ltext29 0 0 ABS 0 text29 main.obj
+__ptext19 2B26 0 CODE 0 text19 main.obj
+___intlo_sp 0 0 STACK 2 stack startup.obj
+__ptext29 28FC 0 CODE 0 text29 main.obj
+parseHex@line 1 0 COMRAM 1 cstackCOMRAM main.obj
+__Hend_init 1004 0 CODE 0 end_init main.obj
+__Lend_init 1000 0 CODE 0 end_init main.obj
+_usb_sendProcess 2C98 0 CODE 0 text17 main.obj
+_clock_init 28FC 0 CODE 0 text29 main.obj
+parseLine@data 76 0 BANK0 1 cstackBANK0 main.obj
+__end_of_mcp2515_receive_message 3A96 0 CODE 0 text22 main.obj
+__end_of_parseHex 30C2 0 CODE 0 text6 main.obj
+parseLine@am1 82 0 BANK0 1 cstackBANK0 main.obj
+_usb_string_0 109E 0 SMALLCONST 0 smallconst main.obj
+usb_putstr@s 15 0 COMRAM 1 cstackCOMRAM main.obj
+_mcp2515_init 2E58 0 CODE 0 text25 main.obj
+__smallconst 1004 0 SMALLCONST 0 smallconst startup.obj
+__Hreset_vec 1000 0 CODE 0 reset_vec main.obj
+__Lreset_vec 1000 0 CODE 0 reset_vec main.obj
+_usb_dev_desc 107E 0 SMALLCONST 0 smallconst main.obj
+_mcp2515_write_register 297E 0 CODE 0 text26 main.obj
+_usb_sendleft 4A 0 COMRAM 1 bssCOMRAM main.obj
+mcp2515_write_register@address 3 0 COMRAM 1 cstackCOMRAM main.obj
+usb_handleDescriptorRequest@type F 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_set_SJA1000_filter_code@acr0 7 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_set_SJA1000_filter_code@acr1 4 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_set_SJA1000_filter_code@acr2 5 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_set_SJA1000_filter_code@acr3 6 0 COMRAM 1 cstackCOMRAM main.obj
+__accesstop 60 0 ABS 0 - startup.obj
+__Hintcode_body 0 0 ABS 0 intcode_body main.obj
+__Lintcode_body 0 0 ABS 0 intcode_body main.obj
+__size_of_mcp2515_rx_status 0 0 ABS 0 - main.obj
+_mcp2515_receive_message 37E6 0 CODE 0 text22 main.obj
+intlevel0 0 0 CODE 0 text startup.obj
+intlevel1 0 0 CODE 0 text startup.obj
+intlevel2 0 0 CODE 0 text startup.obj
+_mcp2515_set_SJA1000_filter_mask 2B26 0 CODE 0 text19 main.obj
+parseLine@cnf1 62 0 BANK0 1 cstackBANK0 main.obj
+sendByteHex@value 35 0 COMRAM 1 cstackCOMRAM main.obj
+intlevel3 0 0 CODE 0 text startup.obj
+usb_handleDescriptorRequest@index C 0 COMRAM 1 cstackCOMRAM main.obj
+parseLine@am2 86 0 BANK0 1 cstackBANK0 main.obj
+transmitStd@line 10 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_mcp2515_set_SJA1000_filter_code 2C0E 0 CODE 0 text20 main.obj
+__size_of_sendHex 0 0 ABS 0 - main.obj
+_transmitStd 30C2 0 CODE 0 text5 main.obj
+_usb_string_product 1090 0 SMALLCONST 0 smallconst main.obj
+__size_of_mcp2515_read_register 0 0 ABS 0 - main.obj
+__size_of_mcp2515_write_register 0 0 ABS 0 - main.obj
+start_initialization 29F8 0 CODE 0 cinit main.obj
+__end_of_mcp2515_set_SJA1000_filter_mask 2B86 0 CODE 0 text19 main.obj
+__end_of_mcp2515_read_register 29B6 0 CODE 0 text21 main.obj
+__end_of_mcp2515_write_register 2998 0 CODE 0 text26 main.obj
+__end_of_parseLine 4000 0 CODE 0 text4 main.obj
+parseLine@status 61 0 BANK0 1 cstackBANK0 main.obj
+usb_sendProcess@i 3 0 COMRAM 1 cstackCOMRAM main.obj
+mcp2515_send_message@p_canmsg 3 0 COMRAM 1 cstackCOMRAM main.obj
+_usb_putstr 2A1A 0 CODE 0 text11 main.obj
+_mcp2515_send_message 35DA 0 CODE 0 text7 main.obj
+__end_of_transmitStd 3200 0 CODE 0 text5 main.obj
+parseLine@am3 8A 0 BANK0 1 cstackBANK0 main.obj
+__size_of_clock_process 0 0 ABS 0 - main.obj
+__initialization 29F8 0 CODE 0 cinit main.obj
+mcp2515_rx_status@status 2 0 COMRAM 1 cstackCOMRAM main.obj
+__activetblptr 2 0 ABS 0 - main.obj
+__end_of_usb_sendProcess 2D28 0 CODE 0 text17 main.obj
+parseHex@len 3 0 COMRAM 1 cstackCOMRAM main.obj
+__end_of_mcp2515_init 2EFE 0 CODE 0 text25 main.obj
+mcp2515_receive_message@p_canmsg 5 0 COMRAM 1 cstackCOMRAM main.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_ep 1 200 20
+_ep0out_buffer 1 280 8
+_ep0in_buffer 1 288 8
+_ep2in_buffer 1 298 8
+_ep1in_buffer 1 2A8 40
+_ep3out_buffer 1 2A0 8
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 1000 1000 4 1
+smallconst 0 1004 1004 A0 1
+cstackCOMRAM 1 1 1 52 1
+cstackBANK0 1 60 60 40 1
+bssBANK1 1 100 100 FA 1
+text4 0 3A96 3A96 56A 1
+text22 0 37E6 37E6 2B0 1
+text7 0 35DA 35DA 20C 1
+text13 0 33DC 33DC 1FE 1
+text0 0 3200 3200 1DC 1
+text5 0 30C2 30C2 13E 1
+text6 0 2FC6 2FC6 FC 1
+text15 0 2EFE 2EFE C8 1
+text25 0 2E58 2E58 A6 1
+text1 0 2DBE 2DBE 9A 1
+text14 0 2D28 2D28 96 1
+text17 0 2C98 2C98 90 1
+text10 0 2C0E 2C0E 8A 1
+text20 0 2B86 2B86 88 1
+text19 0 2B26 2B26 60 1
+text28 0 2AE0 2AE0 46 1
+text2 0 2AA6 2AA6 3A 1
+text12 0 2A6E 2A6E 38 1
+text16 0 2A3E 2A3E 30 1
+text11 0 2A1A 2A1A 24 1
+cinit 0 29F8 29F8 22 1
+text18 0 29D6 29D6 22 1
+text24 0 29B6 29B6 20 1
+text21 0 2998 2998 1E 1
+text26 0 297E 297E 1A 1
+text30 0 2964 2964 1A 1
+text8 0 294E 294E 16 1
+text9 0 2938 2938 16 1
+text23 0 2922 2922 16 1
+text3 0 2914 2914 E 1
+text27 0 2906 2906 E 1
+text29 0 28FC 28FC A 1
+text31 0 28F2 28F2 A 1
